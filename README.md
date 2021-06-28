@@ -17,7 +17,10 @@ The project was tested in virtual environment on Windows 10 using Python 3.7.0, 
 git clone git@github.com:emiliantolo/rasa-vaccine-bot.git
 cd rasa-vaccine-bot
 ```
-
+### Generate NLU with chatette
+```code
+.\chatette\gen.bat
+```
 ### Train model
 ```code
 rasa train

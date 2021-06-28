@@ -1,0 +1,317 @@
+version: "2.0"
+rules:
+- rule: activate stats form
+  steps:
+  - intent: vaccine_stats
+  - action: stats_form
+  - active_loop: stats_form
+
+- rule: submit stats form
+  condition:
+  - active_loop: stats_form
+  steps:
+  - action: stats_form
+  - active_loop: null
+  - action: action_stats
+
+- rule: exit stats form
+  condition:
+  - active_loop: stats_form
+  steps:
+  - or:
+    - intent: deny
+    - intent: stop
+  - action: action_deactivate_loop
+  - active_loop: null
+  - action: utter_help_more
+
+- rule: activate booking form 
+  steps:
+  - intent: vaccine_booking
+  - action: action_clear
+  - action: booking_form
+  - active_loop: booking_form
+  wait_for_user_input: false
+
+- rule: submit booking form
+  condition:
+  - active_loop: booking_form
+  - slot_was_set:
+    - already_registered: false
+  steps:
+  - action: booking_form
+  - active_loop: null
+  - action: action_booking
+  - action: action_list
+  wait_for_user_input: false
+
+- rule: exit booking form
+  condition:
+  - active_loop: booking_form
+  steps:
+  - intent: stop
+  - action: utter_ask_continue
+
+- rule: set prev booking form
+  condition:
+  - active_loop: booking_form
+  steps:
+  - intent: deny
+  - action: action_set_prev
+  wait_for_user_input: false
+
+- rule: change prev yes booking form
+  condition:
+  - active_loop: booking_form
+  steps:
+  - action: action_set_prev
+  - slot_was_set:
+    - prev: notnull
+  - intent: affirm
+  - action: action_change_last
+  - action: booking_form
+  wait_for_user_input: false
+
+- rule: change prev no booking form
+  condition:
+  - active_loop: booking_form
+  steps:
+  - action: action_set_prev
+  - slot_was_set:
+    - prev: notnull
+  - intent: stop
+  - action: utter_ask_continue
+
+- rule: no prev
+  condition:
+  - active_loop: booking_form
+  steps:
+  - action: action_set_prev
+  - slot_was_set:
+    - prev: null
+  - action: booking_form
+  wait_for_user_input: false
+
+- rule: exit booking form already registered
+  condition:
+  - active_loop: booking_form
+  steps:
+  - action: booking_form
+  - slot_was_set:
+    - already_registered: true
+  - active_loop: null
+  - action: action_clear
+  - action: utter_help_more
+
+- rule: activate selecting form
+  steps:
+  - action: action_list
+  - slot_was_set:
+    - empty_list: false
+  - action: selecting_form
+  - active_loop: selecting_form
+
+- rule: submit selecting form
+  condition:
+  - active_loop: selecting_form
+  steps:
+  - action: selecting_form
+  - active_loop: null
+  - action: action_selecting
+
+- rule: exit selecting form
+  condition:
+  - active_loop: selecting_form
+  steps:
+  - or:
+    - intent: deny
+    - intent: stop
+  - action: utter_ask_continue
+
+- rule: submit email form
+  condition:
+  - active_loop: email_form
+  steps:
+  - action: email_form
+  - active_loop: null
+  - action: action_email
+  - action: utter_help_more
+
+- rule: exit email form
+  condition:
+  - active_loop: email_form
+  steps:
+  - intent: stop
+  - action: utter_ask_continue
+
+- rule: activate details form
+  steps:
+  - intent: booking_details
+  - action: action_clear
+  - action: details_form
+  - active_loop: details_form
+
+- rule: submit details form nonempty
+  condition:
+  - active_loop: details_form
+  steps:
+  - action: details_form
+  - active_loop: null
+  - action: action_booking_details
+  - slot_was_set:
+    - empty_booking: false
+  - action: utter_help_more
+
+- rule: submit details form empty
+  condition:
+  - active_loop: details_form
+  steps:
+  - action: details_form
+  - active_loop: null
+  - action: action_booking_details
+  - slot_was_set:
+    - empty_booking: true
+  - action: utter_help_more
+
+- rule: exit details form
+  condition:
+  - active_loop: details_form
+  steps:
+  - or:
+    - intent: deny
+    - intent: stop
+  - action: action_deactivate_loop
+  - active_loop: null
+  - action: utter_help_more
+
+- rule: activate delete form
+  steps:
+  - intent: booking_delete
+  - action: delete_form
+  - active_loop: delete_form
+
+- rule: submit delete form nonempty
+  condition:
+  - active_loop: delete_form
+  steps:
+  - action: delete_form
+  - active_loop: null
+  - action: action_booking_details
+  - slot_was_set:
+    - empty_booking: false
+  - action: utter_want_delete
+
+- rule: help more delete action
+  steps:
+  - action: action_booking_delete
+  - action: utter_help_more
+
+- rule: submit delete form empty
+  condition:
+  - active_loop: delete_form
+  steps:
+  - action: delete_form
+  - active_loop: null
+  - action: action_booking_details
+  - slot_was_set:
+    - empty_booking: true
+  - action: utter_help_more
+
+- rule: exit delete form
+  condition:
+  - active_loop: delete_form
+  steps:
+  - or:
+    - intent: deny
+    - intent: stop
+  - action: action_deactivate_loop
+  - active_loop: null
+  - action: utter_help_more
+
+- rule: greeting rule
+  steps:
+  - intent: greet
+  - action: utter_greet
+
+- rule: goodbye rule
+  steps:
+  - intent: bye
+  - action: utter_bye
+
+- rule: rephrase rule
+  steps:
+  - intent: nlu_fallback
+  - action: utter_please_rephrase
+
+- rule: i am a bot rule
+  steps:
+  - intent: bot_challenge
+  - action: utter_iamabot
+  - action: utter_how_can_help
+
+- rule: help more yes rule
+  steps:
+  - action: utter_help_more
+  - intent: affirm
+  - action: utter_how_can_help
+
+- rule: how help yes rule
+  steps:
+  - action: utter_how_can_help
+  - intent: affirm
+  - action: utter_how_can_help
+
+- rule: help more no rule
+  steps:
+  - action: utter_help_more
+  - or:
+    - intent: deny
+    - intent: stop
+  - action: utter_bye
+
+- rule: how help no rule
+  steps:
+  - action: utter_how_can_help
+  - or:
+    - intent: deny
+    - intent: stop
+  - action: utter_bye
+
+- rule: continue exit
+  steps:
+  - action: utter_ask_continue
+  - or:
+    - intent: deny
+    - intent: stop
+  - action: action_deactivate_loop
+  - active_loop: null
+  - action: action_clear
+  - action: utter_help_more
+
+- rule: continue booking yes
+  condition:
+  - active_loop: booking_form
+  steps:
+  - action: utter_ask_continue
+  - intent: affirm
+  - action: booking_form
+  - active_loop: booking_form
+  wait_for_user_input: false
+
+- rule: continue selecting yes
+  condition:
+  - active_loop: selecting_form
+  steps:
+  - action: utter_ask_continue
+  - intent: affirm
+  - action: selecting_form
+  - active_loop: selecting_form
+
+- rule: continue email yes
+  condition:
+  - active_loop: email_form
+  steps:
+  - action: utter_ask_continue
+  - intent: affirm
+  - action: email_form
+  - active_loop: email_form

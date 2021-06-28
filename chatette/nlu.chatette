@@ -1,0 +1,217 @@
+%[&vaccine_stats](3000)
+    ~[sorry?] ~[tell me] [the?] ~[covid?] ~[vaccination] ~[status] ~[please?][\??]
+    ~[sorry?] ~[tell me] [the?] ~[covid?] ~[vaccination] ~[status] [in|of] @[region] ~[please?][\??]
+    ~[sorry?] ~[tell me] [the?] @[region] ~[covid?] ~[vaccination] ~[status] ~[please?][\??]
+
+%[&vaccine_booking](2000)
+    ~[sorry?] ~[can you?] ~[book] [a|for?] ~[covid?] ~[vaccination] ~[please?][\??]
+    ~[sorry?] ~[i want to] ~[book] [a|for?] ~[covid?] ~[vaccination] ~[please?][\??]
+    ~[i want to] vaccinate
+    ~[i want to] ~[book] a ~[vaccination] appointment ~[please?]
+    ~[i want to] make a new ~[booking] [a|for?] ~[covid?] ~[vaccination]
+
+%[&provide_region](500)
+    @[region]
+    i mean @[region]
+    in @[region]
+    yes @[region]
+    yes in @[region]
+    what about @[region]
+
+%[&provide_option](50)
+    option [number?] ~[number]
+    ~[number] option
+    ~[number]
+    select [option?] [number?] ~[number]
+    what about [option?] [number?] ~[number]
+
+%[&provide_id](50)
+    my id is @[id_number]
+    this is my id @[id_number]
+    it is @[id_number]
+    yes @[id_number]
+    the id number is @[id_number]
+
+%[&provide_email](50)
+    my email is ~[email]
+    this is my email ~[email]
+    it is ~[email]
+    yes ~[email]
+    ~[email]
+
+%[&provide_date](30)
+    ~[date]
+    what about ~[date]
+    yes ~[date]
+
+%[&booking_details](1000)
+    ~[sorry?] ~[tell me] [my?] ~[covid?] ~[vaccination] ~[booking] ~[details] ~[please?][\??]
+    ~[i want to] know my ~[covid?] ~[vaccination?] ~[booking] ~[please?]
+    ~[i want to] see my ~[covid?] ~[vaccination?] ~[booking] ~[please?]
+
+%[&booking_delete](1000)
+    ~[sorry?] ~[can you?] ~[delete] [my?] ~[covid?] ~[vaccination] ~[booking] ~[please?][\??]
+    ~[can you?] ~[delete] it ~[please?][\??]
+    ~[i want to] ~[delete] [my?] ~[covid?] ~[vaccination] ~[booking] ~[please?]
+
+
+%[greet](10)
+   hello
+   hey
+   hei
+   hi
+   Hi!
+   hallo
+   good day
+   good morning
+   ehi
+   hey there
+
+%[affirm](15)
+   yes ~[please?]
+   oh yes
+   yes i am
+   yeah
+   right
+   affirmative
+   good
+   ok
+   yes i want
+
+%[deny](5)
+   no
+   no thanks
+   oh no
+   nope
+   negative
+
+%[stop](4)
+   stop
+   quit
+   exit
+   cancel
+
+%[bye](3)
+   bye
+   goodbye
+   see you
+
+%[bot_challenge](4)
+   are you a bot?
+   are you a human?
+   am I talking to a bot?
+   am I talking to a human?
+
+~[covid]
+    covid
+    covid-19
+    coronavirus
+
+~[vaccination]
+    vaccination
+    vaccine
+    vax
+
+~[booking]
+    booking
+    prenotation
+    reservation
+
+~[delete]
+    delete
+    erase
+    remove
+    eliminate
+    unsubscribe
+    cancel
+
+~[status]
+    status
+    statistics
+    stats
+    situation
+    information
+    info
+
+~[details]
+    details
+    status
+    situation
+    information
+    info
+
+~[sorry]
+    sorry
+    excuse me
+    hey
+
+~[tell me]
+    ~[can you?] [tell|show|give] me
+    ~[i want to] know
+
+~[can you]
+    [can|could|would] you
+
+~[i want to]
+    i want to
+    i wanna
+    i would like to
+
+~[book]
+    [book|find|reserve] [me?]
+    [make|find] a [booking]
+
+~[please]
+    please
+
+~[number]
+    first
+    second
+    third
+    one
+    two
+    three
+    1
+    2
+    3
+
+~[email]
+    prova\@prova.it
+    email\@email.com
+    email\@gmail.com
+
+~[date]
+    tomorrow
+    in two days
+    the third of july
+
+@[id_number]
+    1234567890
+    2516840552
+    3274673743
+    0124854024
+    2047526102
+
+@[region]
+   [Abruzzo|abr]=ABR
+   [Basilicata|bas]=BAS
+   [Calabria|cal]=CAL
+   [Campania|cam]=CAM
+   [Emilia Romagna|Emilia|emr]=EMR
+   [Friuli Venezia Giulia|Friuli|fvg]=FVG
+   [Lazio|laz]=LAZ
+   [Liguria|lig]=LIG
+   [Lombardia|lom]=LOM
+   [Marche|mar]=MAR
+   [Molise|mol]=MOL
+   [P.A. Bolzano|Bolzano|Alto Adige|pab]=PAB
+   [P.A. Trento|Trento|Trentino|pat]=PAT
+   [Piemonte|pie]=PIE
+   [Puglia|pug]=PUG
+   [Sardegna|sar]=SAR
+   [Sicilia|sic]=SIC
+   [Toscana|tos]=TOS
+   [Umbria|umb]=UMB
+   [Valle d'Aosta|Val d'Aosta|vda]=VDA
+   [Veneto|ven]=VEN
+   [total|general|italy|all|italian|ita]=ITA

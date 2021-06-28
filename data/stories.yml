@@ -1,0 +1,2264 @@
+version: "2.0"
+stories:
+- story: greet and stats and close
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: vaccine_stats
+  - action: stats_form
+  - active_loop: stats_form
+  - active_loop: null
+  - action: action_stats
+  - or:
+    - intent: deny
+    - intent: stop
+  - action: utter_help_more
+  - intent: deny
+  - action: utter_bye
+- story: all stats
+  steps:
+  - intent: vaccine_stats
+  - action: stats_form
+  - active_loop: stats_form
+  - active_loop: null
+  - action: action_stats
+  - or:
+    - intent: deny
+    - intent: stop
+  - action: utter_help_more
+- story: greet and stats and yes and stats and close
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: vaccine_stats
+  - action: stats_form
+  - active_loop: stats_form
+  - active_loop: null
+  - action: action_stats
+  - intent: affirm
+  - action: stats_form
+  - active_loop: stats_form
+  - active_loop: null
+  - action: action_stats
+  - or:
+    - intent: deny
+    - intent: stop
+  - action: utter_help_more
+  - intent: deny
+  - action: utter_bye
+- story: stats and yes and stats
+  steps:
+  - intent: vaccine_stats
+  - action: stats_form
+  - active_loop: stats_form
+  - active_loop: null
+  - action: action_stats
+  - intent: affirm
+  - action: stats_form
+  - active_loop: stats_form
+  - active_loop: null
+  - action: action_stats
+  - or:
+    - intent: deny
+    - intent: stop
+  - action: utter_help_more
+- story: stats and yes and no
+  steps:
+  - action: action_stats
+  - intent: affirm
+  - action: stats_form
+  - active_loop: stats_form
+  - or:
+    - intent: deny
+    - intent: stop
+  - action: action_deactivate_loop
+  - active_loop: null
+  - action: utter_help_more
+- story: stats and yes
+  steps:
+  - action: action_stats
+  - intent: affirm
+  - action: stats_form
+  - active_loop: stats_form
+- story: stats and no
+  steps:
+  - action: action_stats
+  - or:
+    - intent: deny
+    - intent: stop
+  - action: utter_help_more
+- story: greet and all stats and region and stats and close
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: vaccine_stats
+  - action: stats_form
+  - active_loop: stats_form
+  - active_loop: null
+  - action: action_stats
+  - intent: provide_region
+  - action: stats_form
+  - active_loop: stats_form
+  - active_loop: null
+  - action: action_stats
+  - or:
+    - intent: deny
+    - intent: stop
+  - action: utter_help_more
+  - intent: deny
+  - action: utter_bye
+- story: all stats and region and stats and no
+  steps:
+  - intent: vaccine_stats
+  - action: stats_form
+  - active_loop: stats_form
+  - active_loop: null
+  - action: action_stats
+  - intent: provide_region
+  - action: stats_form
+  - active_loop: stats_form
+  - active_loop: null
+  - action: action_stats
+  - or:
+    - intent: deny
+    - intent: stop
+  - action: utter_help_more
+- story: all stats and region and stats
+  steps:
+  - intent: vaccine_stats
+  - action: stats_form
+  - active_loop: stats_form
+  - active_loop: null
+  - action: action_stats
+  - intent: provide_region
+  - action: stats_form
+  - active_loop: stats_form
+  - active_loop: null
+  - action: action_stats
+- story: interrupt stats form
+  steps:
+  - intent: vaccine_stats
+  - action: stats_form
+  - active_loop: stats_form
+  - or:
+    - intent: deny
+    - intent: stop
+  - action: action_deactivate_loop
+  - active_loop: null
+  - action: utter_help_more
+- story: ask continue and close
+  steps:
+  - action: stats_form
+  - active_loop: stats_form
+  - or:
+    - intent: deny
+    - intent: stop
+  - action: action_deactivate_loop
+  - active_loop: null
+  - action: utter_help_more
+- story: greet and book vaccine
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: vaccine_booking
+  - action: action_clear
+  - action: booking_form
+  - active_loop: booking_form
+  - slot_was_set:
+    - already_registered: false
+  - active_loop: null
+  - action: action_booking
+  - action: action_list
+  - slot_was_set:
+    - empty_list: false
+  - action: selecting_form
+  - active_loop: selecting_form
+  - active_loop: null
+  - action: action_selecting
+  - intent: affirm
+  - action: email_form
+  - active_loop: email_form
+  - active_loop: null
+  - action: action_email
+  - action: utter_help_more
+  - intent: deny
+  - action: utter_bye
+- story: book vaccine
+  steps:
+  - intent: vaccine_booking
+  - action: action_clear
+  - action: booking_form
+  - active_loop: booking_form
+  - slot_was_set:
+    - already_registered: false
+  - active_loop: null
+  - action: action_booking
+  - action: action_list
+  - slot_was_set:
+    - empty_list: false
+  - action: selecting_form
+  - active_loop: selecting_form
+  - active_loop: null
+  - action: action_selecting
+  - intent: affirm
+  - action: email_form
+  - active_loop: email_form
+  - active_loop: null
+  - action: action_email
+  - action: utter_help_more
+  - intent: deny
+  - action: utter_bye
+- story: action selecting yes
+  steps:
+  - action: selecting_form
+  - active_loop: selecting_form
+  - active_loop: null
+  - action: action_selecting
+  - intent: affirm
+  - action: email_form
+  - active_loop: email_form
+  - active_loop: null
+  - action: action_email
+  - action: utter_help_more
+- story: action selecting no
+  steps:
+  - action: selecting_form
+  - active_loop: selecting_form
+  - active_loop: null
+  - action: action_selecting
+  - intent: deny
+  - action: action_list
+  - slot_was_set:
+    - empty_list: false
+  - action: selecting_form
+  - active_loop: selecting_form
+- story: action selecting yes email
+  steps:
+  - action: action_selecting
+  - intent: affirm
+  - action: email_form
+  - active_loop: email_form
+- story: action selecting no email
+  steps:
+  - action: action_selecting
+  - intent: deny
+  - action: action_list
+- story: book already registered
+  steps:
+  - intent: vaccine_booking
+  - action: action_clear
+  - action: booking_form
+  - active_loop: booking_form
+  - intent: provide_id
+  - action: booking_form
+  - slot_was_set:
+    - already_registered: true
+  - active_loop: null
+  - action: action_clear
+  - action: utter_help_more
+- story: greet and interrupt booking form
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: vaccine_booking
+  - action: action_clear
+  - action: booking_form
+  - active_loop: booking_form
+  - intent: stop
+  - action: utter_ask_continue
+  - intent: deny
+  - action: action_deactivate_loop
+  - active_loop: null
+  - action: action_clear
+  - action: utter_help_more
+- story: interrupt booking form
+  steps:
+  - intent: vaccine_booking
+  - action: action_clear
+  - action: booking_form
+  - active_loop: booking_form
+  - intent: stop
+  - action: utter_ask_continue
+  - intent: deny
+  - action: action_deactivate_loop
+  - active_loop: null
+  - action: action_clear
+  - action: utter_help_more
+- story: booking ask continue and close
+  steps:
+  - action: booking_form
+  - active_loop: booking_form
+  - intent: stop
+  - action: utter_ask_continue
+  - intent: deny
+  - action: action_deactivate_loop
+  - active_loop: null
+  - action: action_clear
+  - action: utter_help_more
+- story: booking ask continue and continue
+  steps:
+  - action: booking_form
+  - active_loop: booking_form
+  - intent: stop
+  - action: utter_ask_continue
+  - intent: affirm
+  - action: booking_form
+  - active_loop: booking_form
+  - slot_was_set:
+    - already_registered: false  
+  - active_loop: null
+  - action: action_booking
+  - action: action_list
+  - slot_was_set:
+    - empty_list: false
+  - action: selecting_form
+  - active_loop: selecting_form
+  - active_loop: null
+  - action: action_selecting
+  - intent: affirm
+  - action: email_form
+  - active_loop: email_form
+  - active_loop: null
+  - action: action_email
+  - action: utter_help_more
+- story: book vaccine search empty search again
+  steps:
+  - intent: vaccine_booking
+  - action: action_clear
+  - action: booking_form
+  - active_loop: booking_form
+  - slot_was_set:
+    - already_registered: false
+  - active_loop: null
+  - action: action_booking
+  - action: action_list
+  - slot_was_set:
+    - empty_list: true
+  - intent: affirm
+  - action: booking_form
+  - active_loop: booking_form
+  - slot_was_set:
+    - already_registered: false  
+  - active_loop: null
+  - action: action_booking
+  - action: action_list
+  - slot_was_set:
+    - empty_list: false
+  - action: selecting_form
+  - active_loop: selecting_form
+  - active_loop: null
+  - action: action_selecting
+  - intent: affirm
+  - action: email_form
+  - active_loop: email_form
+  - active_loop: null
+  - action: action_email
+  - action: utter_help_more
+- story: book search empty
+  steps:
+  - slot_was_set:
+    - already_registered: false
+  - active_loop: null
+  - action: action_booking
+  - action: action_list
+  - slot_was_set:
+    - empty_list: true
+  - intent: affirm
+  - action: booking_form
+  - active_loop: booking_form
+  - slot_was_set:
+    - already_registered: false
+  - active_loop: null
+  - action: action_booking
+  - action: action_list
+  - slot_was_set:
+    - empty_list: false
+  - action: selecting_form
+  - active_loop: selecting_form
+  - intent: deny
+  - action: utter_ask_continue
+  - intent: deny
+  - action: action_deactivate_loop
+  - active_loop: null
+  - action: action_clear
+  - action: utter_help_more
+- story: book vaccine search empty search stop
+  steps:
+  - intent: vaccine_booking
+  - action: action_clear
+  - action: booking_form
+  - active_loop: booking_form
+  - slot_was_set:
+    - already_registered: false
+  - active_loop: null
+  - action: action_booking
+  - action: action_list
+  - slot_was_set:
+    - empty_list: true
+  - intent: deny
+  - action: utter_help_more
+- story: book search empty stop
+  steps:
+  - action: action_booking
+  - action: action_list
+  - slot_was_set:
+    - empty_list: true
+  - intent: deny
+  - action: utter_help_more
+- story: book vaccine change choice
+  steps:
+  - intent: vaccine_booking
+  - action: action_clear
+  - action: booking_form
+  - active_loop: booking_form
+  - slot_was_set:
+    - already_registered: false  
+  - active_loop: null
+  - action: action_booking
+  - action: action_list
+  - slot_was_set:
+    - empty_list: false
+  - action: selecting_form
+  - active_loop: selecting_form
+  - active_loop: null
+  - action: action_selecting
+  - intent: deny
+  - action: action_list
+  - slot_was_set:
+    - empty_list: false
+  - action: selecting_form
+  - active_loop: selecting_form
+  - active_loop: null
+  - action: action_selecting
+  - intent: affirm
+  - action: email_form
+  - active_loop: email_form
+  - active_loop: null
+  - action: action_email
+  - action: utter_help_more
+  - intent: deny
+  - action: utter_bye
+- story: booking details
+  steps:
+  - intent: booking_details
+  - action: action_clear
+  - action: details_form
+  - active_loop: details_form
+  - active_loop: null
+  - action: action_booking_details
+  - slot_was_set:
+    - empty_booking: false
+  - action: utter_help_more
+  - intent: deny
+  - action: utter_bye
+- story: booking details empty
+  steps:
+  - intent: booking_details
+  - action: action_clear
+  - action: details_form
+  - active_loop: details_form
+  - active_loop: null
+  - action: action_booking_details
+  - slot_was_set:
+    - empty_booking: true
+  - action: utter_help_more
+  - intent: deny
+  - action: utter_bye
+- story: booking delete yes
+  steps:
+  - intent: booking_delete
+  - action: delete_form
+  - active_loop: delete_form
+  - active_loop: null
+  - action: action_booking_details
+  - slot_was_set:
+    - empty_booking: false
+  - action: utter_want_delete
+  - intent: affirm
+  - action: action_booking_delete
+  - action: utter_help_more
+- story: booking delete no
+  steps:
+  - intent: booking_delete
+  - action: delete_form
+  - active_loop: delete_form
+  - active_loop: null
+  - action: action_booking_details
+  - slot_was_set:
+    - empty_booking: false
+  - action: utter_want_delete
+  - intent: deny
+  - action: utter_not_deleted
+  - action: utter_help_more
+- story: booking delete empty
+  steps:
+  - intent: booking_delete
+  - action: delete_form
+  - active_loop: delete_form
+  - active_loop: null
+  - action: action_booking_details
+  - slot_was_set:
+    - empty_booking: true
+  - action: utter_help_more
+- story: booking details and delete
+  steps:
+  - intent: booking_details
+  - action: action_clear
+  - action: details_form
+  - active_loop: details_form
+  - active_loop: null
+  - action: action_booking_details
+  - slot_was_set:
+    - empty_booking: false
+  - action: utter_help_more
+  - intent: booking_delete
+  - action: delete_form
+  - active_loop: delete_form
+  - active_loop: null
+  - action: action_booking_details
+  - slot_was_set:
+    - empty_booking: false
+  - action: utter_want_delete
+  - intent: affirm
+  - action: action_booking_delete
+  - action: utter_help_more
+- story: Story from Conversation ID 876b322c3017489fa9fb4a2b3d70c42e
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: vaccine_stats
+  - action: stats_form
+  - active_loop: stats_form
+  - slot_was_set:
+    - requested_slot: region
+  - intent: provide_region
+    entities:
+    - region: ITA
+  - action: stats_form
+  - active_loop: null
+  - slot_was_set:
+    - region: ITA
+  - action: action_stats
+  - slot_was_set:
+    - region: null
+  - intent: provide_region
+    entities:
+    - region: PAT
+  - action: stats_form
+  - active_loop: stats_form
+  - active_loop: null
+  - slot_was_set:
+    - region: PAT
+  - action: action_stats
+  - slot_was_set:
+    - region: null
+  - intent: deny
+  - action: utter_help_more
+  - intent: vaccine_booking
+  - action: action_clear
+  - action: booking_form
+  - active_loop: booking_form
+  - slot_was_set:
+    - requested_slot: id_number
+  - intent: provide_id
+    entities:
+    - id_number: '1234567890'
+  - action: booking_form
+  - slot_was_set:
+    - id_number: '1234567890'
+  - intent: provide_region
+    entities:
+    - region: PAT
+  - action: booking_form
+  - slot_was_set:
+    - region: PAT
+  - intent: affirm
+  - action: booking_form
+  - slot_was_set:
+    - already_registered: false
+  - active_loop: null
+  - slot_was_set:
+    - time: true
+  - action: action_booking
+  - slot_was_set:
+    - search_id: e813fe71-7df2-4d26-9f29-ee53eedcc1ff
+  - slot_was_set:
+    - last_ok: null
+  - action: action_list
+  - slot_was_set:
+    - empty_list: false
+  - action: selecting_form
+  - active_loop: selecting_form
+  - slot_was_set:
+    - requested_slot: choice
+  - intent: provide_option
+    entities:
+    - id_number: '1'
+    - number: 1
+  - action: selecting_form
+  - active_loop: null
+  - slot_was_set:
+    - choice: 1
+  - action: action_selecting
+  - intent: affirm
+  - action: email_form
+  - active_loop: email_form
+  - slot_was_set:
+    - requested_slot: email
+  - intent: provide_email
+    entities:
+    - email: ziopero@gmail.com
+  - action: email_form
+  - slot_was_set:
+    - email: ziopero@gmail.com
+  - intent: affirm
+  - action: email_form
+  - active_loop: null
+  - slot_was_set:
+    - last_ok: true
+  - action: action_email
+  - action: utter_help_more
+  - intent: deny
+  - action: utter_bye
+- story: Story from Conversation ID 34f0003dc5974ae5b9d87dd24215f239
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: vaccine_stats
+    entities:
+    - region: LOM
+  - action: stats_form
+  - active_loop: stats_form
+  - slot_was_set:
+    - region: LOM
+  - action: action_stats
+  - slot_was_set:
+    - region: null
+  - intent: affirm
+  - action: stats_form
+  - active_loop: stats_form
+  - slot_was_set:
+    - requested_slot: region
+  - intent: provide_region
+    entities:
+    - region: ITA
+  - action: stats_form
+  - active_loop: null
+  - slot_was_set:
+    - region: ITA
+  - action: action_stats
+  - slot_was_set:
+    - region: null
+  - intent: deny
+  - action: utter_help_more
+  - intent: bye
+  - action: utter_bye
+- story: Story from Conversation ID dba5be6fa42549a99a515012dbe21d86
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: vaccine_booking
+  - action: action_clear
+  - action: booking_form
+  - active_loop: booking_form
+  - slot_was_set:
+    - requested_slot: id_number
+  - intent: provide_id
+    entities:
+    - id_number: '0212564215'
+  - action: booking_form
+  - slot_was_set:
+    - id_number: null
+  - intent: provide_id
+    entities:
+    - id_number: '1234567890'
+  - action: booking_form
+  - slot_was_set:
+    - id_number: '1234567890'
+  - intent: provide_region
+    entities:
+    - region: LOM
+  - action: booking_form
+  - slot_was_set:
+    - region: LOM
+  - intent: provide_date
+    entities:
+    - time: '2021-06-25T00:00:00.000+02:00'
+  - action: booking_form
+  - slot_was_set:
+    - already_registered: false
+  - active_loop: null
+  - slot_was_set:
+    - time: '2021-06-25T00:00:00.000+02:00'
+  - action: action_booking
+  - slot_was_set:
+    - search_id: a040d1e7-028b-4c80-8178-95e5fd2ead2e
+  - slot_was_set:
+    - last_ok: null
+  - action: action_list
+  - slot_was_set:
+    - empty_list: false
+  - action: selecting_form
+  - active_loop: selecting_form
+  - slot_was_set:
+    - requested_slot: choice
+  - intent: provide_option
+    entities:
+    - ordinal: 1
+  - action: selecting_form
+  - active_loop: null
+  - slot_was_set:
+    - choice: 1
+  - action: action_selecting
+  - intent: affirm
+  - action: email_form
+  - active_loop: email_form
+  - slot_was_set:
+    - requested_slot: email
+  - intent: provide_email
+    entities:
+    - email: ziopero@gmail.com
+  - action: email_form
+  - slot_was_set:
+    - email: ziopero@gmail.com
+  - intent: affirm
+  - action: email_form
+  - active_loop: null
+  - slot_was_set:
+    - last_ok: true
+  - action: action_email
+  - action: utter_help_more
+  - intent: deny
+  - action: utter_bye
+- story: interactive_story_1
+  steps:
+  - intent: vaccine_stats
+    entities:
+    - region: ITA
+  - action: stats_form
+  - active_loop: stats_form
+  - slot_was_set:
+    - region: ITA
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: action_stats
+  - intent: provide_region
+    entities:
+    - region: PAT
+  - action: stats_form
+  - active_loop: stats_form
+  - slot_was_set:
+    - region: PAT
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: action_stats
+  - intent: deny
+  - action: utter_help_more
+- story: Story from Conversation ID 1c534fcb194444489e0558d6969111fd
+  steps:
+  - slot_was_set:
+    - requested_slot: id_number
+  - intent: provide_id
+    entities:
+    - number: 123456789
+  - action: booking_form
+  - active_loop: booking_form
+  - slot_was_set:
+    - requested_slot: id_number
+  - intent: provide_id
+    entities:
+    - id_number: '1234567890'
+    - number: 1234567890
+  - action: booking_form
+  - slot_was_set:
+    - id_number: '1234567890'
+  - slot_was_set:
+    - requested_slot: region
+  - intent: provide_region
+    entities:
+    - region: LOM
+  - action: booking_form
+  - slot_was_set:
+    - region: LOM
+  - intent: affirm
+  - action: booking_form
+  - slot_was_set:
+    - already_registered: false
+  - active_loop: null
+  - slot_was_set:
+    - time: true
+  - action: action_booking
+  - slot_was_set:
+    - search_id: d217cdae-b240-44a7-b9f6-6842ed58eaf1
+  - slot_was_set:
+    - last_ok: null
+  - action: action_list
+  - slot_was_set:
+    - empty_list: false
+  - action: selecting_form
+  - active_loop: selecting_form
+  - slot_was_set:
+    - requested_slot: choice
+  - intent: provide_option
+    entities:
+    - number: 1
+  - action: selecting_form
+  - active_loop: null
+  - slot_was_set:
+    - choice: 1
+  - action: action_selecting
+  - intent: affirm
+  - action: email_form
+  - active_loop: email_form
+  - slot_was_set:
+    - requested_slot: email
+  - intent: provide_email
+    entities:
+    - email: ziopero@gmail.com
+  - action: email_form
+  - slot_was_set:
+    - email: ziopero@gmail.com
+  - intent: affirm
+  - action: email_form
+  - active_loop: null
+  - slot_was_set:
+    - last_ok: true
+  - action: action_email
+  - action: utter_help_more
+- story: Story from Conversation ID 67c440c338b24c92a2f55953803881d1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: vaccine_booking
+  - action: action_clear
+  - action: booking_form
+  - active_loop: booking_form
+  - slot_was_set:
+    - requested_slot: id_number
+  - intent: provide_id
+    entities:
+    - id_number: '3214567893'
+    - number: 3214567893
+  - action: booking_form
+  - slot_was_set:
+    - id_number: null
+  - slot_was_set:
+    - requested_slot: id_number
+  - intent: provide_id
+    entities:
+    - id_number: '1234567890'
+    - number: 1234567890
+  - action: booking_form
+  - slot_was_set:
+    - id_number: '1234567890'
+  - slot_was_set:
+    - requested_slot: region
+  - intent: stop
+  - action: utter_ask_continue
+  - intent: deny
+  - action: action_deactivate_loop
+  - active_loop: null
+  - action: action_clear
+  - action: utter_help_more
+- story: Story from Conversation ID 208c7421c5444943bb7303ec77fed1a0
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: booking_details
+  - action: action_clear
+  - action: details_form
+  - active_loop: details_form
+  - slot_was_set:
+    - requested_slot: id_number
+  - intent: provide_id
+    entities:
+    - id_number: '1234567890'
+    - number: 1234567890
+  - action: details_form
+  - active_loop: null
+  - slot_was_set:
+    - id_number: '1234567890'
+  - action: action_booking_details
+  - slot_was_set:
+    - empty_booking: true
+  - action: utter_help_more
+  - intent: vaccine_booking
+  - action: action_clear
+  - action: booking_form
+  - active_loop: booking_form
+  - slot_was_set:
+    - requested_slot: id_number
+  - intent: provide_id
+    entities:
+    - id_number: '1234567890'
+    - number: 1234567890
+  - action: booking_form
+  - slot_was_set:
+    - id_number: '1234567890'
+  - slot_was_set:
+    - requested_slot: region
+  - intent: provide_region
+    entities:
+    - region: PAT
+  - action: booking_form
+  - slot_was_set:
+    - region: PAT
+  - intent: affirm
+  - action: booking_form
+  - slot_was_set:
+    - already_registered: false
+  - active_loop: null
+  - slot_was_set:
+    - time: true
+  - action: action_booking
+  - slot_was_set:
+    - search_id: 8c1cb071-ab61-4e07-be28-c68065f09cd4
+  - slot_was_set:
+    - last_ok: null
+  - action: action_list
+  - slot_was_set:
+    - empty_list: false
+  - action: selecting_form
+  - active_loop: selecting_form
+  - slot_was_set:
+    - requested_slot: choice
+  - intent: provide_option
+    entities:
+    - ordinal: 1
+  - action: selecting_form
+  - active_loop: null
+  - slot_was_set:
+    - choice: 1
+  - action: action_selecting
+  - intent: deny
+  - action: action_list
+  - slot_was_set:
+    - empty_list: false
+  - action: selecting_form
+  - active_loop: selecting_form
+  - slot_was_set:
+    - choice: null
+  - intent: provide_option
+    entities:
+    - ordinal: 3
+  - action: selecting_form
+  - active_loop: null
+  - slot_was_set:
+    - choice: 3
+  - action: action_selecting
+  - intent: affirm
+  - action: email_form
+  - active_loop: email_form
+  - slot_was_set:
+    - requested_slot: email
+  - intent: provide_email
+    entities:
+    - email: ziopero@gmail.com
+  - action: email_form
+  - slot_was_set:
+    - email: ziopero@gmail.com
+  - intent: affirm
+  - action: email_form
+  - active_loop: null
+  - slot_was_set:
+    - last_ok: true
+  - action: action_email
+  - action: utter_help_more
+  - intent: affirm
+  - action: utter_how_can_help
+  - intent: vaccine_stats
+  - action: stats_form
+  - active_loop: stats_form
+  - active_loop: null
+  - slot_was_set:
+    - region: PAT
+  - action: action_stats
+  - intent: deny
+  - action: action_deactivate_loop
+  - active_loop: null
+  - action: utter_help_more
+  - intent: booking_details
+  - action: action_clear
+  - action: details_form
+  - active_loop: details_form
+  - slot_was_set:
+    - requested_slot: id_number
+  - intent: provide_id
+    entities:
+    - id_number: '1234567890'
+    - number: 1234567890
+  - action: details_form
+  - active_loop: null
+  - slot_was_set:
+    - id_number: '1234567890'
+  - action: action_booking_details
+  - action: utter_help_more
+  - intent: booking_delete
+  - action: delete_form
+  - active_loop: delete_form
+  - active_loop: null
+  - slot_was_set:
+    - id_number: '1234567890'
+  - action: action_booking_details
+  - slot_was_set:
+    - empty_booking: false
+  - action: utter_want_delete
+  - intent: affirm
+  - action: action_booking_delete
+  - action: utter_help_more
+  - intent: bye
+  - action: utter_bye
+- story: Story from Conversation ID 040425ed26f244f289f03e7e34fc6fe8
+  steps:
+  - intent: booking_details
+  - action: action_clear
+  - action: details_form
+  - active_loop: details_form
+  - slot_was_set:
+    - requested_slot: id_number
+  - intent: provide_id
+    entities:
+    - id_number: '1234567890'
+    - number: 1234567890
+  - action: details_form
+  - active_loop: null
+  - slot_was_set:
+    - id_number: '1234567890'
+  - action: action_booking_details
+  - slot_was_set:
+    - empty_booking: true
+  - action: utter_help_more
+  - intent: vaccine_booking
+  - action: action_clear
+  - action: booking_form
+  - active_loop: booking_form
+  - slot_was_set:
+    - requested_slot: id_number
+  - intent: provide_id
+    entities:
+    - id_number: '1234567890'
+    - number: 1234567890
+  - action: booking_form
+  - slot_was_set:
+    - id_number: '1234567890'
+  - slot_was_set:
+    - requested_slot: region
+  - intent: provide_region
+    entities:
+    - region: PAT
+  - action: booking_form
+  - slot_was_set:
+    - region: PAT
+  - slot_was_set:
+    - requested_slot: time
+  - intent: affirm
+  - action: booking_form
+  - slot_was_set:
+    - already_registered: false
+  - active_loop: null
+  - slot_was_set:
+    - time: true
+  - action: action_booking
+  - slot_was_set:
+    - search_id: 7eb188af-1804-42c9-a22f-36aa66d671a1
+  - slot_was_set:
+    - last_ok: null
+  - action: action_list
+  - slot_was_set:
+    - empty_list: false
+  - action: selecting_form
+  - active_loop: selecting_form
+  - slot_was_set:
+    - requested_slot: choice
+  - intent: provide_option
+    entities:
+    - number: 1
+  - action: selecting_form
+  - active_loop: null
+  - slot_was_set:
+    - choice: 1
+  - action: action_selecting
+  - intent: affirm
+  - action: email_form
+  - active_loop: email_form
+  - slot_was_set:
+    - requested_slot: email
+  - intent: provide_email
+    entities:
+    - email: prova@gmail.com
+  - action: email_form
+  - slot_was_set:
+    - email: prova@gmail.com
+  - slot_was_set:
+    - requested_slot: last_ok
+  - intent: affirm
+  - action: email_form
+  - active_loop: null
+  - slot_was_set:
+    - last_ok: true
+  - action: action_email
+  - action: utter_help_more
+  - intent: vaccine_stats
+  - action: stats_form
+  - active_loop: stats_form
+  - slot_was_set:
+    - requested_slot: region
+  - intent: deny
+  - action: action_deactivate_loop
+  - active_loop: null
+  - slot_was_set:
+    - requested_slot: null
+  - action: utter_help_more
+  - intent: booking_details
+  - action: action_clear
+  - action: details_form
+  - active_loop: details_form
+  - slot_was_set:
+    - requested_slot: id_number
+  - intent: provide_id
+    entities:
+    - id_number: '1234567890'
+    - number: 1234567890
+  - action: details_form
+  - active_loop: null
+  - slot_was_set:
+    - id_number: '1234567890'
+  - action: action_booking_details
+  - slot_was_set:
+    - empty_booking: false
+  - action: utter_help_more
+  - intent: booking_delete
+  - action: delete_form
+  - active_loop: delete_form
+  - active_loop: null
+  - slot_was_set:
+    - id_number: '1234567890'
+  - action: action_booking_details
+  - slot_was_set:
+    - empty_booking: false
+  - action: utter_want_delete
+  - intent: affirm
+  - action: action_booking_delete
+  - action: utter_help_more
+  - intent: deny
+  - action: utter_bye
+- story: Story from Conversation ID ddf4280fb7e94b3eb3a42fadc90f86ce
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: vaccine_booking
+  - action: action_clear
+  - action: booking_form
+  - active_loop: booking_form
+  - slot_was_set:
+    - requested_slot: id_number
+  - intent: provide_id
+    entities:
+    - id_number: '321456789'
+    - number: 321456789
+  - action: booking_form
+  - slot_was_set:
+    - id_number: null
+  - slot_was_set:
+    - requested_slot: id_number
+  - intent: provide_id
+    entities:
+    - id_number: '1234567890'
+    - number: 1234567890
+  - action: booking_form
+  - slot_was_set:
+    - id_number: '1234567890'
+  - intent: provide_region
+    entities:
+    - region: VEN
+  - action: booking_form
+  - slot_was_set:
+    - region: VEN
+  - intent: provide_date
+    entities:
+    - time: '2021-06-27T00:00:00.000+02:00'
+  - action: booking_form
+  - slot_was_set:
+    - already_registered: false
+  - active_loop: null
+  - slot_was_set:
+    - time: '2021-06-27T00:00:00.000+02:00'
+  - action: action_booking
+  - action: action_list
+  - slot_was_set:
+    - empty_list: false
+  - action: selecting_form
+  - active_loop: selecting_form
+  - slot_was_set:
+    - requested_slot: choice
+  - intent: provide_option
+    entities:
+    - number: 1
+  - action: selecting_form
+  - active_loop: null
+  - slot_was_set:
+    - choice: 1
+  - action: action_selecting
+  - intent: affirm
+  - action: email_form
+  - active_loop: email_form
+  - slot_was_set:
+    - requested_slot: email
+  - intent: provide_email
+    entities:
+    - email: ziopero@gmail.com
+  - action: email_form
+  - slot_was_set:
+    - email: ziopero@gmail.com
+  - intent: affirm
+  - action: email_form
+  - active_loop: null
+  - slot_was_set:
+    - last_ok: true
+  - action: action_email
+  - action: utter_help_more
+- story: Story from Conversation ID 50e6371f4b3242438f08636e77fc8dfb
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: vaccine_booking
+  - action: action_clear
+  - action: booking_form
+  - active_loop: booking_form
+  - slot_was_set:
+    - requested_slot: id_number
+  - intent: provide_id
+    entities:
+    - id_number: '1234567890'
+    - number: 1234567890
+  - action: booking_form
+  - slot_was_set:
+    - id_number: '1234567890'
+  - intent: provide_region
+    entities:
+    - region: PAT
+  - action: booking_form
+  - slot_was_set:
+    - region: PAT
+  - intent: provide_date
+    entities:
+    - time: '2021-07-02T00:00:00.000+02:00'
+  - action: booking_form
+  - slot_was_set:
+    - already_registered: false
+  - active_loop: null
+  - slot_was_set:
+    - time: '2021-07-02T00:00:00.000+02:00'
+  - action: action_booking
+  - slot_was_set:
+    - search_id: 44c022a5-9a2d-4568-bf0f-7c7dc4018c7c
+  - slot_was_set:
+    - last_ok: null
+  - action: action_list
+  - slot_was_set:
+    - empty_list: true
+  - intent: deny
+  - action: utter_help_more
+- story: Story from Conversation ID f04a28532386464792815076d69816de
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: booking_details
+  - action: action_clear
+  - action: details_form
+  - active_loop: details_form
+  - slot_was_set:
+    - requested_slot: id_number
+  - intent: provide_id
+    entities:
+    - id_number: '9876543210'
+    - number: 9876543210
+  - action: details_form
+  - slot_was_set:
+    - id_number: null
+  - intent: provide_id
+    entities:
+    - id_number: '1234567890'
+    - number: 1234567890
+  - action: details_form
+  - active_loop: null
+  - slot_was_set:
+    - id_number: '1234567890'
+  - action: action_booking_details
+  - slot_was_set:
+    - empty_booking: true
+  - action: utter_help_more
+  - intent: vaccine_booking
+  - action: action_clear
+  - action: booking_form
+  - active_loop: booking_form
+  - slot_was_set:
+    - requested_slot: id_number
+  - intent: provide_id
+    entities:
+    - id_number: '1234567890'
+    - number: 1234567890
+  - action: booking_form
+  - slot_was_set:
+    - id_number: '1234567890'
+  - intent: provide_region
+    entities:
+    - region: VEN
+  - action: booking_form
+  - slot_was_set:
+    - region: VEN
+  - intent: provide_date
+    entities:
+    - time: '2021-06-27T00:00:00.000+02:00'
+  - action: booking_form
+  - slot_was_set:
+    - already_registered: false
+  - active_loop: null
+  - slot_was_set:
+    - time: '2021-06-27T00:00:00.000+02:00'
+  - action: action_booking
+  - action: action_list
+- story: Story from Conversation ID b8a209eb45544d00a8197bac050f52c8
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: vaccine_booking
+  - action: action_clear
+  - action: booking_form
+  - active_loop: booking_form
+  - slot_was_set:
+    - requested_slot: id_number
+  - intent: provide_id
+    entities:
+    - id_number: '1234567890'
+    - number: 1234567890
+  - action: booking_form
+  - slot_was_set:
+    - id_number: '1234567890'
+  - intent: provide_region
+    entities:
+    - region: LOM
+  - action: booking_form
+  - slot_was_set:
+    - region: LOM
+  - intent: provide_date
+    entities:
+    - time: '2021-06-27T00:00:00.000+02:00'
+  - action: booking_form
+  - slot_was_set:
+    - already_registered: false
+  - active_loop: null
+  - slot_was_set:
+    - time: '2021-06-27T00:00:00.000+02:00'
+  - action: action_booking
+  - slot_was_set:
+    - search_id: b9d4d0fe-def9-4247-a5ef-7c01136c23b6
+  - slot_was_set:
+    - last_ok: null
+  - action: action_list
+  - slot_was_set:
+    - empty_list: false
+  - action: selecting_form
+  - active_loop: selecting_form
+  - slot_was_set:
+    - requested_slot: choice
+  - intent: provide_option
+    entities:
+    - ordinal: 1
+  - action: selecting_form
+  - active_loop: null
+  - slot_was_set:
+    - choice: 1
+  - action: action_selecting
+  - intent: deny
+  - action: action_list
+  - slot_was_set:
+    - empty_list: false
+  - action: selecting_form
+  - active_loop: selecting_form
+  - slot_was_set:
+    - choice: null
+  - intent: provide_option
+    entities:
+    - ordinal: 2
+  - action: selecting_form
+  - active_loop: null
+  - slot_was_set:
+    - choice: 2
+  - action: action_selecting
+  - intent: affirm
+  - action: email_form
+  - active_loop: email_form
+  - slot_was_set:
+    - requested_slot: email
+  - intent: provide_email
+    entities:
+    - email: prova@prova.com
+  - action: email_form
+  - slot_was_set:
+    - email: prova@prova.com
+  - intent: affirm
+  - action: email_form
+  - active_loop: null
+  - slot_was_set:
+    - last_ok: true
+  - action: action_email
+  - action: utter_help_more
+  - intent: vaccine_stats
+    entities:
+    - region: sho
+  - action: stats_form
+  - active_loop: stats_form
+  - slot_was_set:
+    - region: null
+  - intent: deny
+  - action: action_deactivate_loop
+  - active_loop: null
+  - slot_was_set:
+    - requested_slot: null
+  - action: utter_help_more
+  - intent: vaccine_stats
+  - action: stats_form
+  - active_loop: stats_form
+  - slot_was_set:
+    - requested_slot: region
+  - intent: deny
+  - action: action_deactivate_loop
+  - active_loop: null
+  - slot_was_set:
+    - requested_slot: null
+  - action: utter_help_more
+  - intent: booking_details
+  - action: action_clear
+  - action: details_form
+  - active_loop: details_form
+  - slot_was_set:
+    - requested_slot: id_number
+  - intent: provide_id
+    entities:
+    - id_number: '1234567890'
+    - number: 1234567890
+  - action: details_form
+  - active_loop: null
+  - slot_was_set:
+    - id_number: '1234567890'
+  - action: action_booking_details
+  - slot_was_set:
+    - empty_booking: false
+  - action: utter_help_more
+  - intent: deny
+  - action: utter_bye
+- story: Story from Conversation ID fc3e1fb769fc40ac89bd0f421bb7d698
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: vaccine_stats
+  - action: stats_form
+  - active_loop: stats_form
+  - slot_was_set:
+    - region: PAT
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: action_stats
+  - intent: deny
+  - action: utter_help_more
+- story: Story from Conversation ID 903373923b6641a98450453a827ba51f
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: vaccine_booking
+  - action: action_clear
+  - action: booking_form
+  - active_loop: booking_form
+  - slot_was_set:
+    - requested_slot: id_number
+  - intent: provide_id
+    entities:
+    - id_number: '1234567890'
+    - number: 1234567890
+  - action: booking_form
+  - slot_was_set:
+    - id_number: '1234567890'
+    - already_registered: true
+  - active_loop: null
+  - action: action_clear
+  - action: utter_help_more
+- story: interactive_story_2
+  steps:
+  - intent: vaccine_booking
+  - action: action_clear
+  - action: booking_form
+  - active_loop: booking_form
+  - slot_was_set:
+    - requested_slot: id_number
+  - slot_was_set:
+    - id_number: '1234567890'
+  - slot_was_set:
+    - already_registered: true
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: action_clear
+  - action: utter_help_more
+- story: interactive_story_3
+  steps:
+  - intent: vaccine_booking
+  - action: action_clear
+  - action: booking_form
+  - active_loop: booking_form
+  - slot_was_set:
+    - requested_slot: id_number
+  - slot_was_set:
+    - id_number: '1234567890'
+  - slot_was_set:
+    - already_registered: true
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: action_clear
+  - action: utter_help_more
+  - intent: booking_delete
+  - action: delete_form
+  - active_loop: delete_form
+  - slot_was_set:
+    - requested_slot: id_number
+  - slot_was_set:
+    - id_number: '1234567890'
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: action_booking_details
+  - slot_was_set:
+    - empty_booking: false
+  - action: utter_want_delete
+  - intent: affirm
+  - action: action_booking_delete
+  - action: utter_help_more
+  - intent: vaccine_booking
+  - action: action_clear
+  - action: booking_form
+  - active_loop: booking_form
+  - slot_was_set:
+    - requested_slot: id_number
+  - slot_was_set:
+    - id_number: '1234567890'
+  - slot_was_set:
+    - already_registered: false
+  - slot_was_set:
+    - requested_slot: region
+  - intent: stop
+  - action: utter_ask_continue
+  - intent: deny
+  - action: action_deactivate_loop
+  - active_loop: null
+  - action: action_clear
+  - action: utter_help_more
+- story: interactive_story_4
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: vaccine_stats
+  - action: stats_form
+  - active_loop: stats_form
+  - slot_was_set:
+    - requested_slot: region
+  - intent: vaccine_booking
+  - action: action_clear
+  - action: booking_form
+  - active_loop: booking_form
+  - slot_was_set:
+    - requested_slot: id_number
+  - slot_was_set:
+    - id_number: '1234567890'
+  - slot_was_set:
+    - already_registered: false
+  - slot_was_set:
+    - requested_slot: region
+  - slot_was_set:
+    - region: PAT
+  - slot_was_set:
+    - requested_slot: time
+  - slot_was_set:
+    - time: '2021-06-28T23:00:00.000+02:00'
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: action_booking
+  - slot_was_set:
+    - search_id: b7ce20f3-b70b-4161-af8c-e02e5ae716c5
+  - slot_was_set:
+    - last_ok: null
+  - action: action_list
+  - slot_was_set:
+    - empty_list: true
+  - slot_was_set:
+    - time: null
+  - intent: affirm
+  - action: booking_form
+  - active_loop: booking_form
+  - slot_was_set:
+    - region: PAT
+  - slot_was_set:
+    - id_number: '1234567890'
+  - slot_was_set:
+    - already_registered: false
+  - slot_was_set:
+    - requested_slot: time
+  - slot_was_set:
+    - time: true
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: action_booking
+  - slot_was_set:
+    - search_id: a03dc20b-d743-4afe-adec-1b284e22d557
+  - slot_was_set:
+    - last_ok: null
+  - action: action_list
+  - slot_was_set:
+    - empty_list: false
+  - action: selecting_form
+  - active_loop: selecting_form
+  - slot_was_set:
+    - requested_slot: choice
+  - slot_was_set:
+    - choice: 1
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: action_selecting
+  - intent: affirm
+  - action: email_form
+  - active_loop: email_form
+  - slot_was_set:
+    - requested_slot: email
+  - slot_was_set:
+    - email: prova@gmail.com
+  - slot_was_set:
+    - requested_slot: last_ok
+  - slot_was_set:
+    - last_ok: true
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: action_email
+  - action: utter_help_more
+  - intent: booking_details
+  - action: action_clear
+  - action: details_form
+  - active_loop: details_form
+  - slot_was_set:
+    - requested_slot: id_number
+  - slot_was_set:
+    - id_number: null
+  - slot_was_set:
+    - requested_slot: id_number
+  - slot_was_set:
+    - id_number: '1234567890'
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: action_booking_details
+  - slot_was_set:
+    - empty_booking: false
+  - action: utter_help_more
+  - intent: vaccine_stats
+  - action: stats_form
+  - active_loop: stats_form
+  - slot_was_set:
+    - requested_slot: region
+  - slot_was_set:
+    - region: ITA
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: action_stats
+  - intent: provide_region
+    entities:
+    - region: PAT
+  - action: stats_form
+  - active_loop: stats_form
+  - slot_was_set:
+    - region: PAT
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: action_stats
+  - intent: deny
+  - action: utter_help_more
+  - intent: deny
+  - action: utter_bye
+- story: interactive_story_5
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: vaccine_booking
+  - action: action_clear
+  - action: booking_form
+  - active_loop: booking_form
+  - slot_was_set:
+    - requested_slot: id_number
+  - slot_was_set:
+    - id_number: '1234567890'
+  - slot_was_set:
+    - already_registered: true
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: action_clear
+  - action: utter_help_more
+  - intent: booking_delete
+  - action: delete_form
+  - active_loop: delete_form
+  - slot_was_set:
+    - requested_slot: id_number
+  - slot_was_set:
+    - id_number: '1234567890'
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: action_booking_details
+  - slot_was_set:
+    - empty_booking: false
+  - action: utter_want_delete
+  - intent: affirm
+  - action: action_booking_delete
+  - action: utter_help_more
+  - intent: vaccine_booking
+  - action: action_clear
+  - action: booking_form
+  - active_loop: booking_form
+  - slot_was_set:
+    - requested_slot: id_number
+  - slot_was_set:
+    - id_number: '1234567890'
+  - slot_was_set:
+    - already_registered: false
+  - slot_was_set:
+    - requested_slot: region
+  - slot_was_set:
+    - region: PAT
+  - slot_was_set:
+    - requested_slot: time
+  - slot_was_set:
+    - time: true
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: action_booking
+  - slot_was_set:
+    - search_id: f91b7a21-ef9e-483d-b37a-aa3ec4636f87
+  - slot_was_set:
+    - last_ok: null
+  - action: action_list
+  - slot_was_set:
+    - empty_list: false
+  - action: selecting_form
+  - active_loop: selecting_form
+  - slot_was_set:
+    - requested_slot: choice
+  - slot_was_set:
+    - choice: 3
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: action_selecting
+  - intent: deny
+  - action: action_list
+  - slot_was_set:
+    - empty_list: false
+  - action: selecting_form
+  - active_loop: selecting_form
+  - slot_was_set:
+    - choice: null
+  - slot_was_set:
+    - requested_slot: choice
+  - slot_was_set:
+    - choice: 1
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: action_selecting
+  - intent: affirm
+  - action: email_form
+  - active_loop: email_form
+  - slot_was_set:
+    - requested_slot: email
+  - slot_was_set:
+    - email: prova@prova.it
+  - slot_was_set:
+    - requested_slot: last_ok
+  - slot_was_set:
+    - last_ok: true
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: action_email
+  - action: utter_help_more
+  - intent: booking_details
+  - action: action_clear
+  - action: details_form
+  - active_loop: details_form
+  - slot_was_set:
+    - requested_slot: id_number
+  - slot_was_set:
+    - id_number: '1234567890'
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: action_booking_details
+  - slot_was_set:
+    - empty_booking: false
+  - action: utter_help_more
+  - intent: affirm
+  - action: utter_how_can_help
+  - intent: vaccine_stats
+  - action: stats_form
+  - active_loop: stats_form
+  - slot_was_set:
+    - requested_slot: region
+  - slot_was_set:
+    - region: ITA
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: action_stats
+  - intent: deny
+  - action: utter_help_more
+  - intent: bye
+  - action: utter_bye
+- story: interactive_story_6
+  steps:
+  - intent: vaccine_stats
+  - action: stats_form
+  - active_loop: stats_form
+  - slot_was_set:
+    - requested_slot: region
+  - slot_was_set:
+    - region: ITA
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: action_stats
+  - intent: deny
+  - action: utter_help_more
+  - intent: booking_details
+  - action: action_clear
+  - action: details_form
+  - active_loop: details_form
+  - slot_was_set:
+    - requested_slot: id_number
+  - slot_was_set:
+    - id_number: '1234567890'
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: action_booking_details
+  - slot_was_set:
+    - empty_booking: false
+  - action: utter_help_more
+- story: interactive_story_7
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: bot_challenge
+  - action: utter_iamabot
+  - action: utter_how_can_help
+  - intent: vaccine_stats
+    entities:
+    - region: ITA
+  - action: stats_form
+  - active_loop: stats_form
+  - slot_was_set:
+    - region: ITA
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: action_stats
+  - intent: deny
+  - action: utter_help_more
+  - intent: booking_details
+  - action: action_clear
+  - action: details_form
+  - active_loop: details_form
+  - slot_was_set:
+    - requested_slot: id_number
+  - slot_was_set:
+    - id_number: '1234567890'
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: action_booking_details
+  - slot_was_set:
+    - empty_booking: false
+  - action: utter_help_more
+  - intent: booking_delete
+  - action: delete_form
+  - active_loop: delete_form
+  - slot_was_set:
+    - id_number: '1234567890'
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: action_booking_details
+  - slot_was_set:
+    - empty_booking: false
+  - action: utter_want_delete
+  - intent: affirm
+  - action: action_booking_delete
+  - action: utter_help_more
+  - intent: vaccine_booking
+  - action: action_clear
+  - action: booking_form
+  - active_loop: booking_form
+  - slot_was_set:
+    - requested_slot: id_number
+  - slot_was_set:
+    - id_number: '1234567890'
+  - slot_was_set:
+    - already_registered: false
+  - slot_was_set:
+    - requested_slot: region
+  - slot_was_set:
+    - region: PAT
+  - slot_was_set:
+    - requested_slot: time
+  - slot_was_set:
+    - time: true
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: action_booking
+  - slot_was_set:
+    - search_id: 8dcac89c-460c-40ef-b67d-5045b7505249
+  - slot_was_set:
+    - last_ok: null
+  - action: action_list
+  - slot_was_set:
+    - empty_list: false
+  - action: selecting_form
+  - active_loop: selecting_form
+  - slot_was_set:
+    - requested_slot: choice
+  - slot_was_set:
+    - choice: 1
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: action_selecting
+  - intent: affirm
+  - action: email_form
+  - active_loop: email_form
+  - slot_was_set:
+    - requested_slot: email
+  - slot_was_set:
+    - email: prova@gmail.com
+  - slot_was_set:
+    - requested_slot: last_ok
+  - slot_was_set:
+    - last_ok: true
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: action_email
+  - action: utter_help_more
+- story: interactive_story_8
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: vaccine_booking
+  - action: action_clear
+  - action: booking_form
+  - active_loop: booking_form
+  - slot_was_set:
+    - requested_slot: id_number
+  - intent: deny
+  - action: action_set_prev
+  - slot_was_set:
+    - prev: null
+  - action: booking_form
+  - slot_was_set:
+    - requested_slot: id_number
+  - slot_was_set:
+    - id_number: '1234567890'
+  - slot_was_set:
+    - already_registered: true
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: action_clear
+  - action: utter_help_more
+  - intent: booking_delete
+  - action: delete_form
+  - active_loop: delete_form
+  - slot_was_set:
+    - requested_slot: id_number
+  - slot_was_set:
+    - id_number: '1234567890'
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: action_booking_details
+  - slot_was_set:
+    - empty_booking: false
+  - action: utter_want_delete
+  - intent: affirm
+  - action: action_booking_delete
+  - action: utter_help_more
+  - intent: vaccine_booking
+  - action: action_clear
+  - action: booking_form
+  - active_loop: booking_form
+  - slot_was_set:
+    - requested_slot: id_number
+  - slot_was_set:
+    - id_number: '1234567890'
+  - slot_was_set:
+    - already_registered: false
+  - slot_was_set:
+    - requested_slot: region
+  - slot_was_set:
+    - region: PAT
+  - slot_was_set:
+    - requested_slot: time
+  - intent: deny
+  - action: action_set_prev
+  - slot_was_set:
+    - prev: region
+  - intent: affirm
+  - action: action_change_last
+  - slot_was_set:
+    - requested_slot: region
+  - slot_was_set:
+    - region: null
+  - action: booking_form
+  - slot_was_set:
+    - requested_slot: region
+  - slot_was_set:
+    - region: PAT
+  - slot_was_set:
+    - requested_slot: time
+  - slot_was_set:
+    - time: '2021-06-29T22:00:00.000+02:00'
+  - slot_was_set:
+    - requested_slot: last_ok
+  - intent: deny
+  - action: action_set_prev
+  - slot_was_set:
+    - prev: time
+  - intent: affirm
+  - action: action_change_last
+  - slot_was_set:
+    - requested_slot: time
+  - slot_was_set:
+    - time: null
+  - action: booking_form
+  - slot_was_set:
+    - requested_slot: time
+  - slot_was_set:
+    - time: true
+  - slot_was_set:
+    - requested_slot: last_ok
+  - slot_was_set:
+    - last_ok: true
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: action_booking
+  - slot_was_set:
+    - search_id: 9d0f9742-409f-4aa0-aec2-85562aff0792
+  - slot_was_set:
+    - last_ok: null
+  - action: action_list
+  - slot_was_set:
+    - empty_list: false
+  - action: selecting_form
+  - active_loop: selecting_form
+  - slot_was_set:
+    - requested_slot: choice
+  - slot_was_set:
+    - choice: 3
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: action_selecting
+  - intent: deny
+  - action: action_list
+  - slot_was_set:
+    - empty_list: false
+  - action: selecting_form
+  - active_loop: selecting_form
+  - slot_was_set:
+    - choice: null
+  - slot_was_set:
+    - requested_slot: choice
+  - slot_was_set:
+    - choice: 1
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: action_selecting
+  - intent: affirm
+  - action: email_form
+  - active_loop: email_form
+  - slot_was_set:
+    - requested_slot: email
+  - slot_was_set:
+    - email: prova@prova.com
+  - slot_was_set:
+    - requested_slot: last_ok
+  - slot_was_set:
+    - last_ok: true
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: action_email
+  - action: utter_help_more
+- story: interactive_story_9
+  steps:
+  - intent: vaccine_booking
+  - action: action_clear
+  - action: booking_form
+  - active_loop: booking_form
+  - slot_was_set:
+    - requested_slot: id_number
+  - slot_was_set:
+    - id_number: '1234567890'
+  - slot_was_set:
+    - already_registered: true
+  - slot_was_set:
+    - requested_slot: null
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: action_clear
+  - action: utter_help_more
+  - intent: booking_delete
+  - action: delete_form
+  - active_loop: delete_form
+  - slot_was_set:
+    - requested_slot: id_number
+  - slot_was_set:
+    - id_number: '1234567890'
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: action_booking_details
+  - slot_was_set:
+    - empty_booking: false
+  - action: utter_want_delete
+  - intent: deny
+  - action: utter_not_deleted
+  - action: utter_help_more
+  - intent: booking_delete
+    entities:
+    - id_number: '1234567890'
+    - number: 1234567890
+  - action: delete_form
+  - active_loop: delete_form
+  - slot_was_set:
+    - id_number: '1234567890'
+  - slot_was_set:
+    - id_number: '1234567890'
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: action_booking_details
+  - slot_was_set:
+    - empty_booking: false
+  - action: utter_want_delete
+  - intent: affirm
+  - action: action_booking_delete
+  - action: utter_help_more
+- story: interactive_story_10
+  steps:
+  - intent: vaccine_booking
+  - action: action_clear
+  - action: booking_form
+  - active_loop: booking_form
+  - slot_was_set:
+    - requested_slot: id_number
+  - intent: deny
+  - action: action_set_prev
+  - slot_was_set:
+    - prev: null
+  - action: booking_form
+  - slot_was_set:
+    - requested_slot: id_number
+  - slot_was_set:
+    - id_number: null
+  - slot_was_set:
+    - requested_slot: id_number
+  - slot_was_set:
+    - id_number: '1234567890'
+  - slot_was_set:
+    - already_registered: false
+  - slot_was_set:
+    - requested_slot: region
+  - slot_was_set:
+    - region: PAT
+  - slot_was_set:
+    - requested_slot: time
+  - intent: deny
+  - action: action_set_prev
+  - slot_was_set:
+    - prev: region
+  - intent: affirm
+  - action: action_change_last
+  - slot_was_set:
+    - requested_slot: region
+  - slot_was_set:
+    - region: null
+  - action: booking_form
+  - slot_was_set:
+    - requested_slot: region
+  - slot_was_set:
+    - region: PAT
+  - slot_was_set:
+    - requested_slot: time
+  - slot_was_set:
+    - time: '2021-06-29T00:00:00.000+02:00'
+  - slot_was_set:
+    - requested_slot: last_ok
+  - slot_was_set:
+    - last_ok: true
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: action_booking
+  - slot_was_set:
+    - search_id: 2f10767d-f954-49be-b977-217b91d48670
+  - slot_was_set:
+    - last_ok: null
+  - action: action_list
+  - slot_was_set:
+    - empty_list: false
+  - action: selecting_form
+  - active_loop: selecting_form
+  - slot_was_set:
+    - requested_slot: choice
+  - slot_was_set:
+    - choice: 1
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: action_selecting
+  - intent: affirm
+  - action: email_form
+  - active_loop: email_form
+  - slot_was_set:
+    - requested_slot: email
+  - slot_was_set:
+    - email: prova@prova.it
+  - slot_was_set:
+    - requested_slot: last_ok
+  - slot_was_set:
+    - last_ok: true
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: action_email
+  - action: utter_help_more

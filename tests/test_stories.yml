@@ -1,0 +1,312 @@
+version: "2.0"
+stories:
+- story: Story from Conversation ID 4cf5e2fafcf34359981da8d4ddb3b18f
+  steps:
+  - intent: greet
+    user: |-
+      hi
+  - action: utter_greet
+  - intent: vaccine_stats
+    user: |-
+      can you give me vaccination stats about [italy]{"entity": "region", "value": "ITA"}?
+  - action: stats_form
+  - active_loop: stats_form
+  - active_loop: null
+  - slot_was_set:
+    - region: ITA
+  - action: action_stats
+  - intent: provide_region
+    user: |-
+      yes, [trentino]{"entity": "region", "value": "PAT"}
+  - action: stats_form
+  - active_loop: null
+  - slot_was_set:
+    - region: PAT
+  - action: action_stats
+  - intent: deny
+    user: |-
+      no
+  - action: utter_help_more
+- story: Story from Conversation ID cfd66ce5da364b159c9b82a03013402a
+  steps:
+  - intent: greet
+    user: |-
+      hi
+  - action: utter_greet
+  - intent: booking_details
+    user: |-
+      can i see my vaccination booking details please?
+  - action: action_clear
+  - action: details_form
+  - active_loop: details_form
+  - intent: provide_id
+    user: |-
+      [1234567890](id_number)[1234567890]{"entity": "number", "value": 1234567890}
+  - slot_was_set:
+    - requested_slot: id_number
+  - action: details_form
+  - active_loop: null
+  - slot_was_set:
+    - id_number: '1234567890'
+  - action: action_booking_details
+  - slot_was_set:
+    - empty_booking: false
+  - action: utter_help_more
+- story: Story from Conversation ID bacd74cd2fb8470c91082f328d3a2243
+  steps:
+  - intent: greet
+    user: |-
+      hi
+  - action: utter_greet
+  - intent: booking_delete
+    user: |-
+      i want to delete my vaccination reservation please
+  - action: delete_form
+  - active_loop: delete_form
+  - slot_was_set:
+    - requested_slot: id_number
+  - intent: provide_id
+    user: |-
+      [1234567890](id_number)[1234567890]{"entity": "number", "value": 1234567890}
+  - action: delete_form
+  - active_loop: null
+  - slot_was_set:
+    - id_number: '1234567890'
+  - action: action_booking_details
+  - slot_was_set:
+    - empty_booking: false
+  - action: utter_want_delete
+  - intent: affirm
+    user: |-
+      yes
+  - action: action_booking_delete
+  - action: utter_help_more
+- story: Story from Conversation ID 58e5bd4b55c747cf885ea19c7a6b087e
+  steps:
+  - intent: greet
+    user: |-
+      hi
+  - action: utter_greet
+  - intent: vaccine_booking
+    user: |-
+      i would like to book for vaccination
+  - action: action_clear
+  - action: booking_form
+  - active_loop: booking_form
+  - slot_was_set:
+    - requested_slot: id_number
+  - intent: provide_id
+    user: |-
+      [1234567890](id_number)[1234567890]{"entity": "number", "value": 1234567890}
+  - action: booking_form
+  - slot_was_set:
+    - id_number: '1234567890'
+  - intent: provide_region
+    user: |-
+      [trentino]{"entity": "region", "value": "PAT"}
+  - action: booking_form
+  - slot_was_set:
+    - region: PAT
+  - intent: provide_date
+    user: |-
+      [in three days]{"entity": "time", "value": "2021-07-01T01:00:00.000+02:00"}
+  - action: booking_form
+  - slot_was_set:
+    - time: '2021-07-01T01:00:00.000+02:00'
+  - intent: affirm
+    user: |-
+      ok
+  - action: booking_form
+  - active_loop: null
+  - slot_was_set:
+    - last_ok: true
+  - action: action_booking
+  - slot_was_set:
+    - search_id: 0a3e6424-0ab8-415e-bdb9-22b6fd308178
+  - action: action_list
+  - slot_was_set:
+    - empty_list: false
+  - action: selecting_form
+  - active_loop: selecting_form
+  - slot_was_set:
+    - requested_slot: choice
+  - intent: provide_option
+    user: |-
+      [first]{"entity": "ordinal", "value": 1} choice
+  - action: selecting_form
+  - active_loop: null
+  - slot_was_set:
+    - choice: 1
+  - action: action_selecting
+  - intent: affirm
+    user: |-
+      yes please
+  - action: email_form
+  - active_loop: email_form
+  - slot_was_set:
+    - requested_slot: email
+  - intent: provide_email
+    user: |-
+      [prova@gmail.com](email)
+  - action: email_form
+  - slot_was_set:
+    - email: prova@gmail.com
+  - intent: affirm
+    user: |-
+      yes
+  - action: email_form
+  - active_loop: null
+  - slot_was_set:
+    - last_ok: true
+  - action: action_email
+  - action: utter_help_more
+- story: Story from Conversation
+  steps:
+  - intent: greet
+    user: |-
+      hi
+  - action: utter_greet
+  - intent: vaccine_stats
+    user: |-
+      can you tell me vaccination stats about [italy]{"entity": "region", "value": "ITA"}?
+  - action: stats_form
+  - active_loop: stats_form
+  - active_loop: null
+  - slot_was_set:
+    - region: ITA
+  - action: action_stats
+  - intent: provide_region
+    user: |-
+      what about [trentino]{"entity": "region", "value": "PAT"}
+  - action: stats_form
+  - active_loop: null
+  - slot_was_set:
+    - region: PAT
+  - action: action_stats
+  - intent: deny
+    user: |-
+      no
+  - action: utter_help_more
+  - intent: booking_delete
+    user: |-
+      can you delet my vaccine booking please
+  - action: delete_form
+  - active_loop: delete_form
+  - slot_was_set:
+    - requested_slot: id_number
+  - intent: provide_id
+    user: |-
+      it is [8056352471](id_number)[8056352471]{"entity": "number", "value": 8056352471}
+  - action: delete_form
+  - active_loop: null
+  - slot_was_set:
+    - id_number: '8056352471'
+  - action: action_booking_details
+  - slot_was_set:
+    - empty_booking: false
+  - action: utter_want_delete
+  - intent: affirm
+    user: |-
+      yes
+  - action: action_booking_delete
+  - action: utter_help_more
+  - intent: affirm
+    user: |-
+      yes
+  - action: utter_how_can_help
+  - intent: vaccine_booking
+    user: |-
+      i would like to book for vaccination
+  - action: action_clear
+  - action: booking_form
+  - active_loop: booking_form
+  - slot_was_set:
+    - requested_slot: id_number
+  - intent: provide_id
+    user: |-
+      [1234567890](id_number)[1234567890]{"entity": "number", "value": 1234567890}
+  - action: booking_form
+  - slot_was_set:
+    - id_number: '1234567890'
+  - intent: provide_region
+    user: |-
+      [trentino]{"entity": "region", "value": "PAT"}
+  - action: booking_form
+  - slot_was_set:
+    - region: PAT
+  - intent: provide_date
+    user: |-
+      [in three days]{"entity": "time", "value": "2021-07-01T01:00:00.000+02:00"}
+  - action: booking_form
+  - slot_was_set:
+    - time: '2021-07-01T01:00:00.000+02:00'
+  - intent: affirm
+    user: |-
+      ok
+  - action: booking_form
+  - active_loop: null
+  - slot_was_set:
+    - last_ok: true
+  - action: action_booking
+  - slot_was_set:
+    - search_id: 0a3e6424-0ab8-415e-bdb9-22b6fd308178
+  - action: action_list
+  - slot_was_set:
+    - empty_list: false
+  - action: selecting_form
+  - active_loop: selecting_form
+  - slot_was_set:
+    - requested_slot: choice
+  - intent: provide_option
+    user: |-
+      [first]{"entity": "ordinal", "value": 1} choice
+  - action: selecting_form
+  - active_loop: null
+  - slot_was_set:
+    - choice: 1
+  - action: action_selecting
+  - intent: affirm
+    user: |-
+      yes please
+  - action: email_form
+  - active_loop: email_form
+  - slot_was_set:
+    - requested_slot: email
+  - intent: provide_email
+    user: |-
+      [prova@gmail.com](email)
+  - action: email_form
+  - slot_was_set:
+    - email: prova@gmail.com
+  - intent: affirm
+    user: |-
+      yes
+  - action: email_form
+  - active_loop: null
+  - slot_was_set:
+    - last_ok: true
+  - action: action_email
+  - action: utter_help_more
+  - intent: booking_details
+    user: |-
+      can i see my vaccination booking details please?
+  - action: action_clear
+  - action: details_form
+  - active_loop: details_form
+  - intent: provide_id
+    user: |-
+      [1234567890](id_number)[1234567890]{"entity": "number", "value": 1234567890}
+  - slot_was_set:
+    - requested_slot: id_number
+  - action: details_form
+  - active_loop: null
+  - slot_was_set:
+    - id_number: '1234567890'
+  - action: action_booking_details
+  - slot_was_set:
+    - empty_booking: false
+  - action: utter_help_more
+  - intent: bye
+    user: |-
+      bye
+  - action: utter_bye

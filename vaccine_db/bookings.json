@@ -1,0 +1,11 @@
+[
+    {
+        "user_id": "1234567890",
+        "vaccination": {
+            "id": "5930a943-1caf-4601-9c30-c05ab59da0f9",
+            "place": "OSPEDALE SAN CAMILLO",
+            "time": "29 June at 05 55",
+            "details": "floor 0"
+        }
+    }
+]

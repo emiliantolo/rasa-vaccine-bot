@@ -1,0 +1,212 @@
+version: '2.0'
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+intents:
+- provide_date
+- provide_id
+- provide_email
+- deny
+- affirm
+- vaccine_booking
+- provide_option
+- provide_region
+- booking_delete
+- booking_details
+- vaccine_stats
+- greet
+- stop
+- bot_challenge
+- bye
+- nlu_fallback
+entities:
+- email
+- id_number
+- number
+- ordinal
+- region
+- time
+slots:
+  region:
+    type: text
+    auto_fill: false
+    influence_conversation: false
+  requested_slot:
+    type: any
+    influence_conversation: false
+  id_number:
+    type: text
+    auto_fill: false
+    influence_conversation: false
+  last_ok:
+    type: bool
+    auto_fill: false
+    influence_conversation: false
+  time:
+    type: any
+    auto_fill: false
+    influence_conversation: false
+  choice:
+    type: any
+    auto_fill: false
+    influence_conversation: false
+  search_id:
+    type: text
+    auto_fill: false
+    influence_conversation: false
+  empty_list:
+    type: bool
+    auto_fill: false
+    influence_conversation: true
+  email:
+    type: any
+    auto_fill: false
+    influence_conversation: false
+  already_registered:
+    type: bool
+    auto_fill: false
+    influence_conversation: true
+  empty_booking:
+    type: bool
+    auto_fill: false
+    influence_conversation: true
+  prev:
+    type: text
+    auto_fill: false
+    influence_conversation: true
+responses:
+  utter_greet:
+  - text: |
+      Hello! How can I help you?
+  - text: |
+      Hi! What can I do?
+  utter_ask_stats_form_region:
+  - text: |
+      Provide a particular region or say Italy if you are interested in the total. 
+  utter_bye:
+  - text: |
+      Bye!
+  utter_help_more:
+  - text: |
+      Can I help you more?
+  utter_how_can_help:
+  - text: |
+      How can I help?
+  utter_please_rephrase:
+  - text: I'm sorry, I didn't quite understand that. Could you rephrase?
+  utter_ask_continue:
+  - text: Would you like to continue?
+  utter_iamabot:
+  - text: I am a bot.
+  utter_default:
+  - text: Sorry I didn't get that. Can you rephrase?
+  utter_ask_booking_form_id_number:
+  - text: |
+      Ok, please provide a valid 10 digits id number.
+  utter_ask_booking_form_region:
+  - text: |
+      Please provide a region.
+  utter_ask_booking_form_time:
+  - text: |
+      Please provide a specific day or say yes if you want to search for the best available dates.
+  utter_ask_booking_form_last_ok:
+  - text: |
+      Is it ok?
+  utter_ask_email_form_last_ok:
+  - text: |
+      Is {email} ok? Details will be sent to this address.
+  utter_ask_selecting_form_choice:
+  - text: |
+      Please provide a choice with the index of it.
+  utter_ask_email_form_email:
+  - text: |
+      Ok, please provide a valid email to confirm booking.
+  utter_ask_details_form_id_number:
+  - text: |
+      Ok, please provide a valid 10 digits id number.
+  utter_ask_delete_form_id_number:
+  - text: |
+      Ok, please provide a valid 10 digits id number.
+  utter_want_delete:
+  - text: |
+      Are you sure to delete this booking?
+  utter_not_deleted:
+  - text: |
+      Nothing has changed, booking is still there.
+actions:
+- action_booking
+- action_booking_delete
+- action_booking_details
+- action_change_last
+- action_clear
+- action_email
+- action_list
+- action_selecting
+- action_set_prev
+- action_stats
+- utter_bye
+- utter_greet
+- utter_help_more
+- utter_how_can_help
+- utter_iamabot
+- utter_not_deleted
+- utter_want_delete
+- validate_booking_form
+- validate_delete_form
+- validate_details_form
+- validate_email_form
+- validate_selecting_form
+- validate_stats_form
+forms:
+  stats_form:
+    required_slots:
+      region:
+      - entity: region
+        type: from_entity
+  booking_form:
+    required_slots:
+      id_number:
+      - entity: id_number
+        type: from_entity
+      region:
+      - entity: region
+        type: from_entity
+      time:
+      - entity: time
+        type: from_entity
+      - intent: affirm
+        type: from_intent
+        value: true
+      last_ok:
+      - intent: affirm
+        type: from_intent
+        value: true
+  selecting_form:
+    required_slots:
+      choice:
+      - entity: number
+        type: from_entity
+      - entity: ordinal
+        type: from_entity
+  email_form:
+    required_slots:
+      email:
+      - entity: email
+        type: from_entity
+      last_ok:
+      - intent: affirm
+        type: from_intent
+        value: true
+      - intent: deny
+        type: from_intent
+        value: false
+  details_form:
+    required_slots:
+      id_number:
+      - entity: id_number
+        type: from_entity
+  delete_form:
+    required_slots:
+      id_number:
+      - entity: id_number
+        type: from_entity

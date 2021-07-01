@@ -1,0 +1,18 @@
+[
+  {
+    "text": "nope",
+    "intent": "deny",
+    "intent_prediction": {
+      "name": "affirm",
+      "confidence": 0.9415730834007263
+    }
+  },
+  {
+    "text": "good morning",
+    "intent": "greet",
+    "intent_prediction": {
+      "name": "provide_date",
+      "confidence": 0.5177295207977295
+    }
+  }
+]

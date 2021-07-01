@@ -1,0 +1,50 @@
+[
+  {
+    "text": "nope",
+    "intent": "deny",
+    "intent_prediction": {
+      "name": "provide_option",
+      "confidence": 0.6421792507171631
+    }
+  },
+  {
+    "text": "hi",
+    "intent": "greet",
+    "intent_prediction": {
+      "name": "affirm",
+      "confidence": 0.7441832423210144
+    }
+  },
+  {
+    "text": "good morning",
+    "intent": "greet",
+    "intent_prediction": {
+      "name": "booking_details",
+      "confidence": 0.5751360654830933
+    }
+  },
+  {
+    "text": "yes i am",
+    "intent": "affirm",
+    "intent_prediction": {
+      "name": "provide_region",
+      "confidence": 1.0
+    }
+  },
+  {
+    "text": "good",
+    "intent": "affirm",
+    "intent_prediction": {
+      "name": "greet",
+      "confidence": 0.8746851682662964
+    }
+  },
+  {
+    "text": "3",
+    "intent": "provide_option",
+    "intent_prediction": {
+      "name": "provide_id",
+      "confidence": 0.9480366110801697
+    }
+  }
+]

@@ -1,0 +1,34 @@
+{
+  "id_number": {
+    "precision": 0.8333333333333334,
+    "recall": 1.0,
+    "f1-score": 0.9090909090909091,
+    "support": 10,
+    "confused_with": {}
+  },
+  "region": {
+    "precision": 0.9982876712328768,
+    "recall": 1.0,
+    "f1-score": 0.9991431019708655,
+    "support": 583,
+    "confused_with": {}
+  },
+  "micro avg": {
+    "precision": 0.9949664429530202,
+    "recall": 1.0,
+    "f1-score": 0.9974768713204373,
+    "support": 593
+  },
+  "macro avg": {
+    "precision": 0.9158105022831051,
+    "recall": 1.0,
+    "f1-score": 0.9541170055308873,
+    "support": 593
+  },
+  "weighted avg": {
+    "precision": 0.9955059791940986,
+    "recall": 1.0,
+    "f1-score": 0.9976245152443908,
+    "support": 593
+  }
+}

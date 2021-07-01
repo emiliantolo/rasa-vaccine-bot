@@ -19,6 +19,7 @@ intents:
 - bot_challenge
 - bye
 - nlu_fallback
+- repeat_please
 entities:
 - email
 - id_number
@@ -157,6 +158,7 @@ actions:
 - validate_email_form
 - validate_selecting_form
 - validate_stats_form
+- action_repeat
 forms:
   stats_form:
     required_slots:

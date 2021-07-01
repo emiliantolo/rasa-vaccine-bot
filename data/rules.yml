@@ -315,3 +315,9 @@ rules:
   - intent: affirm
   - action: email_form
   - active_loop: email_form
+
+- rule: say again rule
+  steps:
+  - intent: repeat_please
+  - action: action_repeat
+  

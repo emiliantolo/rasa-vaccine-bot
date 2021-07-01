@@ -1,0 +1,26 @@
+[
+  {
+    "text": "nope",
+    "intent": "deny",
+    "intent_prediction": {
+      "name": "affirm",
+      "confidence": 0.8301963210105896
+    }
+  },
+  {
+    "text": "hi",
+    "intent": "greet",
+    "intent_prediction": {
+      "name": "provide_region",
+      "confidence": 0.9913135766983032
+    }
+  },
+  {
+    "text": "good",
+    "intent": "affirm",
+    "intent_prediction": {
+      "name": "greet",
+      "confidence": 0.7980381846427917
+    }
+  }
+]

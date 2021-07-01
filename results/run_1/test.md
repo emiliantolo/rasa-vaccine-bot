@@ -1,0 +1,1692 @@
+## intent:deny
+- nope
+
+## intent:greet
+- hi
+- good morning
+
+## intent:affirm
+- yes i am
+- good
+
+## intent:provide_date
+- The third of july
+- Yes in two days
+- in two days
+- what about tomorrow
+
+## intent:provide_email
+- My email is email@gmail.com
+- email@email.com
+- this is my email email@gmail.com
+- my email is email@email.com
+- yes email@gmail.com
+- It is prova@prova.it
+
+## intent:repeat_please
+- sorry could you repeat?
+- could you say it again?
+- hey could you repeat please?
+- hey can you repeat please?
+- hey would you repeat please?
+- hey can you say it again please?
+
+## intent:provide_option
+- second
+- third option
+- what about number 2
+- 2 option
+- First option
+- select two
+- select number 1
+- What about number second
+- What about option 1
+- 3
+
+## intent:provide_id
+- My id is [2516840552](id_number)
+- This is my id [3274673743](id_number)
+- The id number is [2516840552](id_number)
+- this is my id [2516840552](id_number)
+- It is [1234567890](id_number)
+- my id is [2516840552](id_number)
+- This is my id [0124854024](id_number)
+- My id is [2047526102](id_number)
+- it is [2516840552](id_number)
+- my id is [3274673743](id_number)
+
+## intent:provide_region
+- in [pat](region)
+- In [Veneto](region)
+- Yes [Liguria](region)
+- [total](region)
+- [molise](region)
+- In [cam](region)
+- [general](region)
+- What about [laz](region)
+- yes [P.A. Bolzano](region)
+- I mean [Lazio](region)
+- In [Trento](region)
+- In [Toscana](region)
+- yes [Emilia](region)
+- yes in [Marche](region)
+- yes in [cam](region)
+- Yes in [Alto Adige](region)
+- Yes in [Sicilia](region)
+- [fvg](region)
+- [Emr](region)
+- I mean [italy](region)
+- Yes [Val d'Aosta](region)
+- in [total](region)
+- What about [pab](region)
+- I mean [cal](region)
+- Yes [Umbria](region)
+- yes in [fvg](region)
+- Yes in [mar](region)
+- In [pie](region)
+- In [Friuli Venezia Giulia](region)
+- in [Sardegna](region)
+- Yes in [Puglia](region)
+- [Sar](region)
+- Yes [total](region)
+- in [tos](region)
+- What about [Emilia Romagna](region)
+- Yes in [cam](region)
+- Yes [Campania](region)
+- In [emr](region)
+- yes in [Calabria](region)
+- i mean [Liguria](region)
+- What about [Abruzzo](region)
+- yes [Umbria](region)
+- in [Friuli](region)
+- yes [Lazio](region)
+- [alto Adige](region)
+- What about [Friuli](region)
+- In [Campania](region)
+- [Basilicata](region)
+- in [Umbria](region)
+- what about [Marche](region)
+- [sardegna](region)
+- what about [Alto Adige](region)
+- [mar](region)
+- yes [lig](region)
+- Yes [laz](region)
+- i mean [sic](region)
+- i mean [umb](region)
+- yes [sar](region)
+- [italy](region)
+- yes [cam](region)
+- In [vda](region)
+- in [abr](region)
+- Yes in [pat](region)
+- i mean [abr](region)
+- yes in [Friuli](region)
+- in [Veneto](region)
+- In [pab](region)
+- Yes [Emilia Romagna](region)
+- yes in [italy](region)
+- Yes [Toscana](region)
+- In [lom](region)
+- Yes [P.A. Trento](region)
+- Yes in [Emilia Romagna](region)
+- Yes [Calabria](region)
+- yes in [Veneto](region)
+- yes [ven](region)
+- What about [cam](region)
+- [Abr](region)
+- yes in [Molise](region)
+- [Pab](region)
+- In [P.A. Trento](region)
+- what about [P.A. Bolzano](region)
+- yes in [Lazio](region)
+- i mean [Alto Adige](region)
+- yes [Friuli Venezia Giulia](region)
+- Yes [mol](region)
+- i mean [pat](region)
+- Yes in [Trento](region)
+- What about [Molise](region)
+- Yes [mar](region)
+- what about [Veneto](region)
+- [trentino](region)
+- I mean [mar](region)
+- what about [Basilicata](region)
+- yes in [Trentino](region)
+- Yes [Veneto](region)
+- i mean [tos](region)
+- Yes [tos](region)
+- i mean [Piemonte](region)
+- In [pat](region)
+
+## intent:booking_details
+- i wanna know my vaccine booking status please
+- Tell me my vax reservation information please?
+- I would like to see my vaccination prenotation
+- i would like to know covid vax booking details please?
+- i want to know my vaccine reservation please
+- sorry i would like to know coronavirus vax reservation situation please?
+- i would like to know vax booking situation please
+- Sorry could you tell me vaccine prenotation info please?
+- I would like to know my coronavirus vaccine booking please
+- I want to see my covid prenotation
+- could you give me vaccine booking situation
+- could you tell me covid vax prenotation info please?
+- I wanna know my coronavirus vax reservation information please?
+- I would like to know my covid vax reservation information
+- tell me my coronavirus vax booking info
+- I want to see my vaccine prenotation
+- i want to know vax reservation info please
+- Could you show me my covid-19 vaccine prenotation details
+- I want to know my booking please
+- I want to know covid vax reservation status please
+- I would like to see my covid reservation
+- i would like to know vax reservation info?
+- hey give me my covid vax booking details?
+- I would like to know my covid vax reservation
+- i wanna see my booking
+- sorry would you show me my vaccination booking details
+- Sorry i want to know vaccination prenotation details?
+- sorry i would like to know my covid-19 vaccine prenotation status?
+- Would you show me covid-19 vaccine prenotation information please?
+- I wanna see my coronavirus reservation please
+- could you tell me vaccination prenotation situation?
+- Excuse me show me vaccine prenotation info please?
+- i wanna know my coronavirus vax booking please
+- Could you give me covid vaccination reservation details please?
+- Sorry tell me my vax booking information
+- sorry i would like to know my vax prenotation information?
+- I wanna see my covid reservation please
+- I wanna know my covid-19 vax prenotation information please
+- I would like to know my covid-19 vax booking
+- i want to see my vaccine prenotation please
+- i want to know my coronavirus vaccine reservation please
+- i want to know my vax reservation please
+- I wanna know my coronavirus reservation
+- sorry give me coronavirus vaccine booking information
+- Hey i wanna know vaccination reservation status?
+- hey i would like to know vaccine prenotation details
+- i want to know my covid booking
+- hey i wanna know covid vaccine prenotation situation please
+- i want to know my coronavirus vax booking please
+- I would like to know covid vax prenotation status please?
+- Hey tell me my vaccine reservation information?
+- Sorry give me covid-19 vaccine prenotation info?
+- i would like to know my covid-19 vaccination reservation situation please?
+- i wanna see my covid vaccination prenotation please
+- hey show me vaccination prenotation info please
+- i wanna know my booking please
+- Give me my vax prenotation details?
+- I wanna see my coronavirus vaccine prenotation please
+- i would like to see my covid-19 vax prenotation
+- I want to see my vax booking please
+- I would like to see my vaccination booking
+- I would like to see my vax reservation please
+- I want to know my covid vaccine booking details?
+- i would like to know my covid vaccination reservation please
+- I wanna see my covid-19 booking please
+- I would like to see my vaccination reservation please
+- sorry tell me my covid-19 vaccination prenotation status?
+- i wanna know my covid-19 vaccine prenotation please
+- excuse me i would like to know coronavirus vaccine booking information?
+- I wanna see my covid vaccine prenotation please
+- i wanna know my coronavirus vaccine reservation please
+- I would like to know my vax reservation
+- I wanna know my vaccination booking situation please?
+- I would like to know covid-19 vaccination reservation info
+- I wanna see my covid reservation
+- could you tell me vaccination reservation info please?
+- excuse me tell me my coronavirus vax prenotation info please?
+- Tell me my vaccine reservation situation
+- sorry give me vaccination reservation details
+- I want to see my covid-19 prenotation please
+- i would like to know my covid-19 booking please
+- I wanna see my coronavirus vaccination prenotation please
+- i would like to see my prenotation
+- Hey give me vax booking details
+- I would like to see my covid-19 booking
+- i wanna see my vax reservation
+- sorry show me vaccine prenotation status please?
+- Hey show me my covid-19 vaccination prenotation situation?
+- I would like to see my vax prenotation please
+- i want to see my booking please
+- I want to know my covid-19 vaccine prenotation please
+- Can you give me covid vax prenotation situation
+- hey i wanna know my vax prenotation info?
+- I wanna see my booking please
+- tell me covid vax booking information please
+- Hey tell me my vaccination booking status?
+- hey give me vaccination reservation status please?
+- i would like to know my reservation please
+- I wanna know my covid-19 vaccination prenotation
+- I would like to know my covid-19 vaccination prenotation
+- I want to know my prenotation please
+- I want to see my booking
+- i wanna know my covid reservation please
+- I want to see my coronavirus prenotation
+- i wanna know my covid vaccination prenotation please
+- i wanna know my vaccine prenotation please
+- Excuse me could you show me my vaccine prenotation status
+- i wanna know my coronavirus booking
+- i want to see my covid reservation
+- i want to know my coronavirus vaccine booking please
+- i would like to see my covid-19 vax reservation please
+- Can you show me vax reservation status
+- hey i want to know my vaccine booking info please
+- could you give me my vaccine booking info please?
+- I wanna know my vax prenotation please
+- hey i want to know vax prenotation status please
+- I want to know my covid vaccine reservation
+- I wanna know my coronavirus booking please
+- Sorry i would like to know my vaccination reservation details?
+- i would like to know my coronavirus vaccine booking
+- I would like to know my covid vax reservation details please?
+- I want to know my prenotation
+- sorry can you show me vax prenotation status
+- excuse me can you show me vaccine booking details please
+- i want to know my vaccine booking
+- i wanna see my covid vaccine reservation
+- i wanna know my covid booking
+- I wanna know vaccine booking status
+- I wanna see my covid-19 vaccine reservation please
+- Hey would you give me my coronavirus vaccination booking details
+- i want to see my reservation
+- i wanna know my covid vaccination reservation
+- sorry tell me my vax prenotation information please
+- i would like to see my prenotation please
+- i want to know my coronavirus vax booking
+- sorry i want to know vaccination booking information
+- i would like to see my covid-19 reservation please
+- i wanna know my vaccination prenotation
+- Excuse me show me my vaccination booking information please?
+- I would like to see my coronavirus booking please
+- excuse me can you give me coronavirus vaccination booking status?
+- Would you show me vaccination reservation information
+- Hey would you show me vaccine prenotation details please
+- hey i would like to know vaccine booking info
+- i want to see my covid-19 vax reservation please
+- I wanna know my vax booking
+- I want to see my vaccine booking please
+- Would you give me my vaccine prenotation status?
+- i want to see my booking
+- i wanna see my vaccine booking please
+- Hey i wanna know my covid vaccination booking info?
+- excuse me give me vaccination reservation status please?
+- hey i want to know covid-19 vaccine booking status please
+- Sorry tell me my vax reservation info please?
+- Sorry i wanna know vaccination reservation details
+- i want to see my coronavirus vaccine booking
+- sorry i would like to know my covid vaccine reservation info please
+- Show me vaccine reservation status please?
+- i want to see my covid vaccination prenotation please
+- i wanna know my coronavirus booking please
+- Can you show me coronavirus vaccination booking status please?
+- i wanna know my vaccination booking please
+- Hey show me my vaccine booking details?
+- i wanna know my covid-19 prenotation please
+- I wanna know my coronavirus vaccination prenotation details please?
+- i would like to see my vaccination booking
+- I would like to know my covid-19 vaccination booking information please
+- could you show me my vaccination booking status?
+- i wanna know my covid-19 reservation
+- Hey could you tell me vaccine reservation details
+- I wanna know my coronavirus vax reservation
+- I would like to know my coronavirus vaccination booking please
+- i wanna see my vaccination booking
+- i wanna see my vaccination reservation please
+- I wanna know coronavirus vaccine prenotation details
+- i would like to see my vaccine reservation please
+- hey i would like to know my covid-19 vax reservation info please
+- i wanna know my coronavirus reservation please
+- Hey i would like to know my covid-19 vaccine reservation info?
+- I want to see my covid prenotation please
+- i wanna know my coronavirus vax booking
+- hey give me coronavirus vaccination reservation information please
+- Could you give me vaccine booking status please?
+- Excuse me i wanna know my vaccination booking situation please
+- i wanna know my covid booking please
+- hey would you tell me my vaccine booking information?
+- I wanna see my coronavirus prenotation
+- i wanna know my prenotation
+- sorry i would like to know vaccine booking details?
+- i want to see my vax booking
+- Sorry i would like to know vaccine reservation situation?
+- i would like to see my covid-19 booking
+- I wanna know my coronavirus vaccination prenotation please
+- I would like to see my covid-19 booking please
+- I want to know my vax booking
+- i wanna see my covid-19 prenotation
+- i want to know my coronavirus vaccine prenotation situation please
+- Could you tell me vaccine reservation information
+- i want to see my covid vax booking please
+- Hey i would like to know my vax prenotation info
+
+## intent:booking_delete
+- I would like to eliminate my covid-19 vax reservation please
+- would you unsubscribe it please
+- I want to delete my vaccine booking
+- unsubscribe my vaccination booking?
+- eliminate my vaccination prenotation
+- I would like to delete coronavirus vaccination booking please
+- eliminate coronavirus vax booking please?
+- I wanna eliminate my coronavirus vaccine booking please
+- Delete it please
+- I want to cancel vaccine booking please
+- hey could you cancel vaccination reservation please
+- I wanna remove covid-19 vaccination prenotation
+- can you eliminate it please?
+- Excuse me erase vaccination reservation please
+- i want to delete my vaccination booking
+- would you unsubscribe my coronavirus vaccine reservation please
+- remove my vaccination prenotation
+- i wanna remove my vaccination reservation
+- unsubscribe my covid vaccination booking?
+- Could you delete it please?
+- i wanna delete vaccination booking please
+- excuse me can you delete vaccination booking please?
+- Excuse me would you erase vax booking?
+- Can you cancel it
+- hey unsubscribe my covid vaccination booking please
+- I would like to remove vaccine prenotation please
+- I wanna unsubscribe my covid-19 vaccine prenotation
+- Remove it?
+- sorry remove my vaccine reservation?
+- I would like to cancel my vaccination prenotation
+- Would you cancel it please
+- I would like to cancel my vax reservation please
+- I want to remove my coronavirus vaccination prenotation
+- I wanna eliminate coronavirus vax prenotation
+- Would you cancel my vaccination booking?
+- Excuse me could you cancel vaccination prenotation please?
+- Can you remove it?
+- Remove it please?
+- i wanna cancel my covid-19 vaccine booking please
+- Could you remove vaccination reservation please
+- eliminate vaccination reservation
+- Sorry would you cancel coronavirus vaccination prenotation please?
+- i would like to remove my vaccination prenotation
+- eliminate my covid vaccine booking
+- i wanna delete my covid vaccine prenotation
+- Could you eliminate my vax booking?
+- I wanna remove my covid vax prenotation please
+- would you remove my vax prenotation please?
+- unsubscribe covid vaccine booking please?
+- eliminate my vax reservation please
+- I wanna delete vaccine prenotation please
+- hey remove my vaccination prenotation
+- i want to unsubscribe covid vaccination prenotation
+- unsubscribe it?
+- Erase my coronavirus vaccine booking
+- i wanna eliminate covid-19 vaccine booking
+- Excuse me erase my covid vaccine reservation?
+- sorry would you delete my coronavirus vaccination booking?
+- can you erase my vax booking please
+- could you eliminate it please?
+- delete covid-19 vax prenotation?
+- would you cancel it please?
+- could you remove it?
+- I want to delete covid-19 vaccination booking please
+- could you cancel my covid-19 vaccination booking
+- remove my covid-19 vaccine prenotation please
+- i would like to unsubscribe covid vaccination booking
+- erase covid vax booking please
+- I wanna remove vax prenotation please
+- i would like to cancel covid-19 vax reservation please
+- Erase my coronavirus vaccination prenotation please?
+- unsubscribe vax booking please?
+- i want to cancel coronavirus vax booking
+- i wanna eliminate my vaccination booking
+- I wanna unsubscribe my vaccine prenotation please
+- I want to remove my covid-19 vax booking
+- could you unsubscribe covid-19 vaccination prenotation
+- I wanna eliminate covid vax reservation
+- excuse me delete my vaccine booking please
+- can you erase it
+- erase it
+- i want to erase my coronavirus vaccination prenotation
+- hey eliminate my vax booking please?
+- Excuse me unsubscribe my vaccination reservation please?
+- delete it please?
+- I wanna delete covid vaccine booking please
+- i would like to remove my vaccination booking
+- Hey delete vaccine reservation please?
+- Sorry would you delete vaccination booking?
+- Erase it please
+- I want to erase my coronavirus vaccination booking please
+- i wanna cancel my covid vaccination reservation please
+- Remove vaccine reservation
+- sorry cancel covid vaccination booking please?
+- i would like to remove my coronavirus vaccination reservation
+- Delete covid-19 vaccine reservation please?
+- I would like to eliminate my vax prenotation please
+- Excuse me eliminate vax booking
+- i wanna cancel my coronavirus vaccine reservation please
+- I want to delete my covid vaccine prenotation
+- I want to delete my vaccination reservation please
+- i want to delete covid vaccination booking please
+- Sorry could you erase covid vaccination prenotation please?
+- Can you delete it
+- i want to unsubscribe my vaccine reservation please
+- Can you unsubscribe it?
+- I want to erase my covid-19 vax reservation
+- I wanna remove my vaccine reservation
+- I wanna erase covid vax prenotation
+- erase covid vax prenotation
+- i would like to remove vaccination prenotation
+- Hey delete covid vax booking
+- I wanna remove vax booking please
+- I wanna eliminate vaccine prenotation please
+- i want to remove my vax prenotation please
+- i want to cancel my vaccination reservation
+- Would you remove it please?
+- remove it?
+- Can you delete it please
+- Would you erase my covid-19 vax reservation?
+- I would like to remove covid vaccine prenotation
+- Hey delete my covid-19 vaccination prenotation please
+- I want to erase vaccine booking please
+- Unsubscribe covid vaccine prenotation please?
+- erase covid-19 vaccination reservation
+- I wanna erase my vaccine booking please
+- Sorry eliminate covid vaccination prenotation please
+- Can you eliminate vaccination prenotation please?
+- i want to eliminate my vaccine booking
+- Could you erase my coronavirus vax reservation please?
+- Would you delete it please
+- hey can you cancel covid-19 vax prenotation
+- i want to cancel covid-19 vax reservation
+- can you eliminate my vax booking
+- i wanna cancel my covid-19 vaccine reservation please
+- I want to erase vaccination reservation
+- i want to delete my vaccination booking please
+- I wanna eliminate vax reservation
+- I want to eliminate my vaccination prenotation please
+- Excuse me erase my vaccine prenotation please?
+- could you remove vax prenotation?
+- Can you remove it please?
+- I would like to erase vax booking
+- hey can you unsubscribe my vaccine booking please
+- i would like to eliminate vax reservation
+- i want to eliminate my vaccination prenotation please
+- Could you cancel vax reservation
+- Erase vax booking please?
+- can you delete my vax booking please?
+- unsubscribe vaccination booking please
+- i would like to eliminate covid vax reservation
+- excuse me unsubscribe vax prenotation
+- Excuse me can you eliminate vax booking please
+- remove my vax prenotation please
+- Can you eliminate my vaccination reservation please
+- i wanna erase my vax reservation please
+- i would like to delete covid-19 vaccine prenotation
+- i want to erase vaccination prenotation please
+- Excuse me delete my vaccine prenotation?
+- I wanna unsubscribe covid vax prenotation please
+- can you delete it please
+- hey would you eliminate my coronavirus vaccination prenotation?
+- Sorry could you erase vaccine booking please?
+- Excuse me eliminate covid vax prenotation please?
+- i want to eliminate my vax reservation
+- I would like to delete covid vaccine reservation
+- remove covid-19 vax prenotation please?
+- could you remove it
+- could you unsubscribe it please?
+- could you cancel vaccination prenotation please
+- I wanna unsubscribe vaccine reservation
+- i would like to erase my covid vaccination prenotation please
+- Would you eliminate it please?
+- i want to delete my covid vaccine booking
+- Excuse me unsubscribe vaccine prenotation
+- Sorry unsubscribe my covid vaccination booking
+- I wanna delete my vaccination booking please
+- Excuse me would you erase vaccination booking please
+- i want to eliminate my vax prenotation
+- I would like to cancel covid-19 vax booking
+- I would like to remove my vaccination reservation please
+- I would like to unsubscribe my vax booking
+- i wanna unsubscribe my vaccine reservation please
+- Could you eliminate my vaccine reservation please?
+- Hey can you delete covid vax booking please?
+- Could you unsubscribe it
+- can you eliminate vaccination prenotation
+- i want to erase my vax reservation please
+- Hey delete covid vax prenotation
+- Sorry would you delete my vax reservation please
+- I would like to cancel vaccination reservation
+- Eliminate it
+- excuse me could you eliminate my vax prenotation
+- sorry can you unsubscribe my vaccination reservation please
+- i want to cancel covid vax prenotation please
+- i would like to remove my vaccine booking
+- sorry can you remove my covid vax prenotation?
+- I would like to cancel my vaccine prenotation please
+- I want to remove my covid vaccine prenotation please
+- Erase my covid vaccination prenotation please?
+
+## intent:vaccine_booking
+- excuse me i wanna find a booking a coronavirus vaccination please
+- find a booking vaccination?
+- Excuse me i want to find a booking covid vaccination?
+- could you book covid vaccine please
+- I would like to make a new prenotation coronavirus vax
+- sorry i want to book me for vaccination?
+- Hey i want to find a booking vax?
+- i would like to reserve me vaccination please?
+- Sorry would you make a booking coronavirus vax please?
+- I wanna make a new booking a covid-19 vax
+- i want to make a booking a vax appointment
+- i would like to book a vaccination please
+- i would like to reserve a vaccination appointment please
+- i want to reserve me a vaccine appointment please
+- I wanna find a booking a coronavirus vax please?
+- i wanna make a booking a covid vaccination?
+- Excuse me could you make a booking vaccine
+- i would like to make a new reservation for covid vax
+- excuse me i want to find a booking a vaccine please?
+- i would like to reserve me covid vax please
+- i want to make a new reservation for vaccination
+- i wanna make a new booking covid vaccination
+- i wanna make a new reservation vax
+- i would like to reserve me a vax appointment
+- Book covid-19 vaccine?
+- i want to make a new booking a vaccine
+- Excuse me i want to make a booking covid vax?
+- sorry would you make a booking for covid vax
+- i want to reserve a vaccine appointment please
+- excuse me find a booking a vaccination?
+- Make a booking a coronavirus vaccine please?
+- I wanna make a new prenotation vaccine
+- i would like to make a new reservation for covid-19 vaccination
+- Hey reserve vax
+- I want to find a booking vaccination?
+- I want to make a new booking vax
+- Excuse me book me vaccination
+- Sorry i would like to make a booking a covid-19 vax please
+- excuse me i want to find a booking a covid-19 vaccine please?
+- Find a booking covid vax please?
+- I would like to make a new prenotation for covid-19 vaccine
+- i wanna make a new reservation for vaccine
+- I wanna make a new booking covid vaccination
+- i would like to make a new prenotation a coronavirus vaccination
+- I want to make a new prenotation a vaccination
+- i wanna make a new booking a covid vax
+- excuse me can you reserve me covid vaccine please?
+- i would like to make a new prenotation a vaccination
+- I want to make a new booking covid-19 vaccine
+- hey i wanna find a booking vaccine please?
+- I would like to reserve me a vaccine please?
+- excuse me could you find a booking vaccination please
+- i want to book me a vaccine please
+- i would like to make a booking a covid vaccination?
+- I wanna find for coronavirus vax
+- Sorry i wanna find vax please
+- Excuse me i want to find vaccination
+- I want to make a booking a vaccine appointment please
+- I want to book me a vax?
+- find for vaccine?
+- i want to make a new booking vax
+- Would you find a vaccination please
+- can you reserve for vaccine please?
+- sorry could you book me a covid-19 vaccine?
+- I would like to make a new reservation covid-19 vaccination
+- Sorry find me vaccine
+- Book me covid-19 vax please
+- Find me covid vax?
+- Sorry could you make a booking for coronavirus vax please
+- i want to make a new booking for coronavirus vax
+- Sorry would you book covid-19 vaccine please?
+- Hey can you reserve me covid-19 vaccination?
+- Could you find a booking a vaccination
+- Can you book for vaccine please?
+- i wanna make a new prenotation vax
+- Sorry would you reserve for covid vaccine
+- sorry i would like to find for vaccination
+- sorry i wanna find a booking covid-19 vax?
+- I want to make a booking covid vaccination please
+- i want to make a new reservation for vax
+- sorry make a booking coronavirus vax
+- sorry i wanna find a booking a vax please
+- I wanna make a booking vaccine?
+- I wanna book me for covid-19 vaccination please?
+- i want to reserve me a vaccination appointment
+- i would like to make a new prenotation covid-19 vax
+- would you find a booking coronavirus vax
+- i want to make a booking a covid vaccine
+- hey i wanna find me for covid-19 vaccine please
+- Sorry could you make a booking for coronavirus vaccine?
+- i would like to make a booking a vax
+- i wanna reserve me a covid vaccine please?
+- I would like to book a vaccine please
+- hey i would like to reserve me coronavirus vaccine?
+- i would like to find a booking covid vaccine?
+- Hey find a booking for vaccine please
+- i would like to find a booking a vaccination
+- would you book vaccination
+- i wanna book me covid vaccination please
+- I wanna make a new booking covid vaccine
+- i would like to book a vaccine appointment please
+- Can you reserve me covid-19 vaccination?
+- i wanna find a booking for vaccine
+- Hey i would like to find a booking coronavirus vaccination
+- hey i want to find coronavirus vax?
+- find a booking for vax please?
+- hey find vaccine please
+- I want to reserve a vaccination appointment please
+- Excuse me would you find a booking a coronavirus vaccination please?
+- hey i want to find covid vaccine please?
+- can you find a booking coronavirus vaccination please?
+- I would like to make a booking covid-19 vaccination?
+- Make a booking for vax please
+- i wanna reserve vaccination
+- i want to find me vaccination please
+- I want to make a new prenotation vaccination
+- Hey book me covid vaccine please?
+- I want to make a new prenotation for covid vaccination
+- I would like to reserve covid-19 vax please
+- I want to find a booking a vaccination appointment
+- i wanna make a new prenotation a covid vax
+- Sorry find a booking vaccination please?
+- Sorry i wanna reserve me vaccination?
+- hey book me vaccination please
+- Hey find a booking for covid vaccine
+- i want to make a new prenotation a coronavirus vaccination
+- I want to reserve vax please?
+- reserve vaccination please
+- I would like to find a booking a vaccine appointment
+- I want to make a booking a vax appointment please
+- i wanna reserve me a vaccination appointment
+- I would like to make a new reservation for covid-19 vaccination
+- I would like to reserve a vaccine appointment please
+- hey reserve me coronavirus vax?
+- I would like to find me a vaccination appointment please
+- i would like to make a new reservation a covid vaccine
+- would you make a booking for vax please?
+- I would like to make a booking vax
+- I would like to book me a coronavirus vaccine please?
+- Can you make a booking for covid-19 vaccination?
+- i want to book me covid-19 vaccine
+- hey would you find vaccination please
+- i would like to find me a vaccine appointment
+- excuse me find a booking for covid vax?
+- excuse me book for vax?
+- I want to make a new reservation for vaccination
+- I would like to make a booking a vaccination appointment please
+- Can you reserve me vax please?
+- sorry could you make a booking a vaccine?
+- Could you reserve coronavirus vaccination please
+- hey reserve a covid vaccination please?
+- Sorry i want to find a vax please?
+- I want to book me a vax appointment
+- hey i would like to book me a vaccination please?
+- Could you find a booking a vaccine?
+- Find me a covid-19 vaccine
+- Hey can you make a booking covid-19 vax
+- I would like to find a booking vaccine
+- I wanna make a booking covid-19 vaccination?
+- i would like to make a new booking for coronavirus vaccine
+- i want to find me a vax appointment please
+- i want to make a new reservation covid-19 vax
+- I wanna make a new reservation covid-19 vaccination
+- hey i want to make a booking for covid-19 vaccine please
+- I wanna make a new prenotation for vax
+- Sorry could you book me covid vax
+- I want to make a new prenotation a vax
+- I wanna find a booking for covid vaccine
+- could you reserve coronavirus vaccine?
+- I want to book me a vaccination appointment please
+- excuse me i would like to find a booking covid-19 vax?
+- would you find a booking vaccine?
+- Excuse me would you reserve me coronavirus vaccination please
+- Hey could you find a booking coronavirus vaccination please
+- hey i wanna reserve me covid-19 vaccination please?
+- I would like to make a booking for vaccine please
+- I wanna find a vaccination appointment please
+- hey would you find a booking for covid vaccination
+- Could you reserve a coronavirus vaccine please?
+- Sorry i want to reserve coronavirus vaccination please?
+- I would like to make a new reservation for vaccine
+- i want to find me a vax appointment
+- I wanna find me a vaccination appointment please
+- I would like to reserve a vax appointment
+- I wanna book me a vaccination appointment
+- i wanna find me a coronavirus vaccine please?
+- I wanna reserve a vax appointment please
+- hey could you make a booking vaccine please?
+- hey i would like to find a booking for covid vaccine
+- Can you find a booking a coronavirus vaccine please?
+- I wanna make a new booking for coronavirus vax
+- Hey find a booking for coronavirus vax
+- i want to book me a vax appointment please
+- Excuse me reserve for vax
+- i wanna make a new booking covid vax
+- make a booking a vaccination please
+- I want to book a vax appointment please
+- excuse me i wanna find for coronavirus vaccination please
+- i wanna make a new booking for covid-19 vax
+- i would like to make a new prenotation for covid-19 vaccination
+- I would like to find a booking a coronavirus vaccination please
+- Excuse me i want to book me covid vax please?
+- i want to make a booking a vaccination appointment please
+- hey i want to make a booking vaccine?
+- hey can you make a booking covid-19 vaccination please
+- i want to find a booking for vaccination
+- i want to make a new booking vaccination
+- i want to make a new reservation coronavirus vaccine
+- book covid vaccination please?
+- sorry i would like to make a booking a covid-19 vaccine?
+- i would like to make a new prenotation for covid vaccination
+- I wanna make a booking vax
+- Excuse me i wanna find a booking a coronavirus vaccine?
+- sorry i wanna make a booking a covid vax
+- Hey i wanna make a booking a vax?
+- I would like to find me a vax appointment
+- I want to reserve a vaccination appointment
+- I want to make a new booking covid-19 vax
+- i wanna book me coronavirus vaccination please
+- Make a booking coronavirus vaccination please
+- i want to make a new prenotation a coronavirus vaccine
+- i wanna find a vaccination appointment
+- i want to make a new reservation covid-19 vaccine
+- i wanna make a new booking a vaccine
+- Hey would you make a booking a vaccination please?
+- Hey would you find a booking for covid-19 vaccination please?
+- i would like to make a new prenotation covid-19 vaccination
+- Excuse me would you make a booking covid-19 vax please?
+- Excuse me would you find covid vaccination please
+- i would like to make a new booking vaccine
+- i would like to make a new booking covid-19 vax
+- I would like to reserve a vaccination appointment please
+- Can you reserve covid vax?
+- i would like to make a booking covid vaccine
+- Sorry could you find a booking a vaccine please
+- hey make a booking coronavirus vaccine
+- I would like to make a booking a vaccine appointment
+- can you find a booking coronavirus vaccination?
+- Sorry i wanna make a booking vax
+- I want to reserve a vaccine appointment please
+- sorry i would like to reserve for coronavirus vaccination please
+- i wanna make a booking for vaccination?
+- sorry make a booking covid-19 vax?
+- i would like to make a new booking for covid-19 vaccine
+- hey i wanna find a booking for covid-19 vaccine
+- i would like to find a booking a covid-19 vax please
+- excuse me would you find a covid vaccination please?
+- I wanna make a new booking a coronavirus vax
+- excuse me could you find coronavirus vaccine?
+- hey i would like to find for vaccine?
+- i wanna make a new reservation covid-19 vaccine
+- I wanna reserve for covid-19 vax?
+- I would like to book for vaccination please
+- I would like to make a new prenotation a covid-19 vax
+- i want to make a new reservation for coronavirus vax
+- i would like to find vaccine please?
+- I wanna make a new prenotation for coronavirus vaccination
+- Book me vaccination please?
+- Sorry can you find a booking covid-19 vax?
+- I wanna make a new booking covid-19 vaccine
+- sorry can you make a booking for covid-19 vaccination please
+- Hey i want to reserve for vaccine
+- I wanna book a vaccine appointment
+- Sorry would you make a booking for covid-19 vaccine
+- I want to book a vaccination appointment
+- i would like to reserve a vaccination appointment
+- hey find a booking for vax please
+- sorry can you reserve me for covid vax please
+- I want to find a vaccine?
+- could you find a booking coronavirus vaccine please
+- I want to find a vaccine appointment please
+- Hey would you find a booking vaccination please
+- I would like to book me a covid vaccine please
+- sorry can you make a booking covid vaccination please?
+- I would like to book covid-19 vaccination please
+- Hey i want to find me a vaccination?
+- excuse me i want to reserve me for coronavirus vaccine please?
+- can you find vaccine please
+- I would like to find a vaccination appointment
+- Hey would you reserve for vaccination please
+- Book a vaccine please?
+- i would like to book a vax appointment please
+- I wanna make a booking for covid vaccination
+- book coronavirus vaccine
+- excuse me i would like to make a booking a covid vax?
+- I wanna make a new reservation vaccination
+- excuse me i would like to reserve me vax please
+- Hey i want to book me vaccine please?
+- hey i would like to book for vax?
+- hey reserve me vaccine?
+- Sorry i wanna reserve me a vax please
+- I wanna find a booking for coronavirus vaccine
+- I want to find a booking for vaccination please?
+- Hey would you make a booking a vaccine please?
+- Hey i want to reserve me coronavirus vax please?
+- Make a booking a coronavirus vaccination?
+- Excuse me i would like to make a booking vaccine?
+- Could you find a booking for covid-19 vaccination?
+- excuse me make a booking vax please?
+- i wanna make a booking covid vaccination please?
+- find a booking a covid vaccine please?
+- I wanna make a booking vax please?
+- i would like to book me a vaccine appointment
+- i want to book me a vaccination appointment
+- I wanna make a booking a vaccine?
+- Excuse me i wanna find a vaccination please
+- hey i want to find a booking vaccine
+- I want to find me for vaccine please
+- i would like to make a booking for covid-19 vax please
+- I would like to make a booking a vaccination?
+- I wanna make a new reservation for covid-19 vaccination
+- Book for vaccination?
+- Excuse me i would like to find a booking coronavirus vax?
+- Sorry can you find a booking for coronavirus vaccination please
+- excuse me find a booking for vaccine
+- I want to find a booking a vax appointment please
+- Hey find a booking a covid-19 vaccine?
+- I wanna find me a vaccine appointment
+- I wanna find a booking a vaccine appointment
+- i want to make a booking covid-19 vaccination
+- i wanna book a vaccine appointment
+- Hey i wanna make a booking for vaccine?
+- Could you find me a covid-19 vax
+- I wanna book me a vaccine appointment
+- i want to make a new reservation a vaccination
+- excuse me can you make a booking for covid-19 vaccine please
+- find a booking vaccine please?
+- sorry i would like to book me vax?
+- Hey would you book for vaccination
+- i would like to make a new prenotation a vax
+- I would like to make a new prenotation covid-19 vaccine
+- sorry could you make a booking for vaccination please?
+- Excuse me i want to find a booking for vaccine
+- i would like to book me a coronavirus vaccination?
+- I wanna make a new reservation a vaccine
+- i want to make a new booking a vaccination
+- make a booking vaccination please?
+- i wanna book me a vaccine appointment please
+- i would like to make a new reservation vax
+- i want to make a booking vaccination?
+- Find a booking for covid vax please?
+- could you make a booking for covid-19 vaccine please
+- I want to find a vax appointment
+- i would like to make a booking for vaccination please?
+- I wanna book a vax appointment
+- I would like to find a booking for coronavirus vax please
+- i wanna make a new prenotation vaccination
+- i wanna find a booking covid vaccine please
+- excuse me can you find me for coronavirus vax
+- i want to make a new booking a covid-19 vax
+- i want to make a new booking covid-19 vaccination
+- I want to find a booking a vaccine please?
+- i would like to reserve a vaccine appointment
+- hey i wanna reserve me a covid-19 vaccination?
+- I would like to book a vaccine appointment
+- I wanna make a new booking for covid vaccine
+- Can you find me covid-19 vaccine please?
+- I would like to reserve me vaccination please
+- I wanna make a booking a vax appointment
+- i would like to find me a vax appointment
+- Sorry i wanna find a booking covid vaccination please?
+- I wanna reserve me covid-19 vaccination please
+- I wanna book me vaccination?
+- Sorry i want to make a booking covid-19 vaccination please
+- i wanna make a booking a covid-19 vaccine
+- hey i would like to make a booking a vaccination please
+- sorry make a booking a covid-19 vax please
+- Sorry i would like to find me a vaccination please
+- hey i wanna reserve a covid-19 vaccination
+- Hey could you book a vaccine please?
+- I would like to make a new booking a covid-19 vaccination
+- i wanna reserve a vax appointment please
+- I wanna make a new booking for vaccination
+- I would like to reserve a vaccination appointment
+- excuse me i wanna book covid-19 vaccine please
+- I would like to make a booking a vaccine appointment please
+- Excuse me find me for vaccine please?
+- i would like to reserve me a vaccine appointment
+- i wanna make a new reservation covid vaccine
+- Hey reserve for vax please?
+- I want to find me a vaccination appointment please
+- hey find for vax?
+- Would you make a booking a vax please
+- i want to make a new prenotation coronavirus vaccination
+- Hey i would like to make a booking a covid vaccine
+- i would like to reserve me vaccine please?
+- i wanna make a booking coronavirus vaccine?
+- I want to find me for vaccination?
+- excuse me can you book covid-19 vax please
+- Can you make a booking vaccination please
+- Sorry i wanna find a booking vaccine please
+- Excuse me book a covid-19 vax?
+- I wanna make a booking a coronavirus vaccine?
+- i would like to make a booking a vaccine appointment
+- i want to make a new booking for vaccination
+- could you reserve me vax
+- Find a booking vax please
+- I want to make a new booking covid vax
+- sorry i wanna reserve a covid-19 vaccination please
+- I would like to make a new reservation for vaccination
+
+## intent:vaccine_stats
+- Sorry give me vaccine status please?
+- i want to know the vaccine situation of [Campania](region)
+- i wanna know the [Emilia](region) coronavirus vaccination information?
+- i would like to know the [P.A. Bolzano](region) covid-19 vaccine status please?
+- Excuse me tell me the vaccine status please
+- give me covid-19 vaccine situation?
+- I would like to know the [Lombardia](region) vax info please
+- Hey show me the vax stats of [Marche](region) please?
+- i want to know the [lig](region) vaccination statistics please
+- Show me the covid-19 vaccination statistics?
+- could you show me covid-19 vaccine statistics
+- give me [umb](region) vax information?
+- i would like to know vaccine stats in [Lazio](region)?
+- tell me the coronavirus vax info please?
+- i would like to know the [mar](region) covid-19 vax status?
+- I would like to know vax status?
+- sorry would you show me the covid vax statistics?
+- Would you tell me covid vaccination info please?
+- hey i want to know [Veneto](region) vax information please
+- Excuse me i wanna know vaccine information of [Molise](region)
+- Give me the vax situation in [Calabria](region)?
+- hey i would like to know the vaccination info of [Valle d'Aosta](region)
+- hey i would like to know the vax situation in [bas](region) please?
+- Sorry tell me the vaccination statistics of [italian](region)?
+- sorry give me the [pat](region) covid-19 vaccination status please
+- excuse me tell me the coronavirus vax info?
+- I wanna know the vaccination information of [tos](region) please?
+- Excuse me tell me the coronavirus vaccination status of [Abruzzo](region) please?
+- Hey i want to know the [Piemonte](region) vaccination situation
+- Excuse me i wanna know the [Umbria](region) vaccination status please
+- Hey i want to know the vax status in [lig](region)
+- Sorry give me vax information in [Campania](region)?
+- hey i wanna know the coronavirus vaccine situation in [Toscana](region)
+- show me the vax status
+- show me [Campania](region) covid-19 vax statistics please
+- Excuse me tell me the vax status of [Bolzano](region)
+- hey i wanna know vaccination status please
+- could you tell me the vaccine information please
+- sorry tell me coronavirus vaccination information of [cal](region) please?
+- i want to know the [cal](region) coronavirus vax information please?
+- hey i would like to know the [cam](region) vax situation please?
+- Sorry would you tell me covid-19 vax info of [sar](region) please?
+- Sorry tell me the covid vax info please?
+- sorry i would like to know the coronavirus vax information in [Lombardia](region)?
+- Hey i wanna know the [all](region) coronavirus vaccination situation please?
+- i wanna know the [Umbria](region) vaccination stats please?
+- excuse me i want to know vaccine info of [all](region) please?
+- excuse me i want to know [Sicilia](region) vaccination statistics
+- could you give me the vaccine information?
+- Sorry i want to know [ven](region) covid vax information?
+- hey i want to know vax stats in [umb](region)
+- I would like to know [Puglia](region) covid-19 vaccine stats?
+- Give me the covid vaccine statistics please?
+- I want to know covid vax stats in [general](region) please
+- Excuse me would you give me the coronavirus vaccination situation please?
+- hey give me the covid vaccination situation in [Piemonte](region) please
+- Sorry i wanna know the [mar](region) vaccination status?
+- could you give me vaccination information please?
+- I would like to know covid vax info please?
+- I would like to know the vax information of [Marche](region) please
+- Can you show me the covid vaccination status of [cal](region)
+- Excuse me could you tell me covid vaccine situation of [Liguria](region) please?
+- hey i want to know vax info
+- hey i want to know the [Molise](region) vaccination situation please?
+- Can you tell me the vaccination information of [Campania](region) please
+- sorry can you tell me covid-19 vaccine stats?
+- hey i would like to know vaccination stats in [P.A. Bolzano](region) please?
+- Hey can you show me the vax stats please?
+- Give me the [Sardegna](region) coronavirus vax situation?
+- Sorry show me [Campania](region) covid vaccination information please
+- i wanna know the [cal](region) covid vaccination information please
+- i would like to know the coronavirus vaccination status in [Sicilia](region)
+- i would like to know vaccination status in [pug](region) please
+- I wanna know the covid vaccination information please?
+- give me the vaccine status please
+- i want to know vaccine stats please
+- I wanna know the vax status in [Lombardia](region) please?
+- I want to know [abr](region) vaccine statistics?
+- sorry i want to know covid vaccine situation?
+- I would like to know the covid vax status
+- Sorry show me vax information of [sic](region) please?
+- Would you tell me the vax status in [laz](region) please
+- Excuse me give me the vaccination situation please
+- i want to know the covid-19 vax status
+- excuse me would you show me the [Sicilia](region) covid vaccine status please
+- could you tell me the covid vaccine information please
+- Sorry i wanna know the [P.A. Trento](region) coronavirus vax stats
+- Would you give me the coronavirus vaccine status please
+- Hey i would like to know the [Toscana](region) vax status?
+- could you tell me the covid vaccination information please?
+- excuse me i wanna know covid-19 vaccination information please
+- I want to know the vaccination stats please?
+- Sorry tell me the [bas](region) vax info please
+- i would like to know the covid-19 vaccination status of [Calabria](region)
+- excuse me i would like to know coronavirus vax status in [laz](region)?
+- Tell me vax situation please
+- i want to know the coronavirus vaccine status please
+- Sorry would you show me the coronavirus vaccine information
+- Give me vax status in [cal](region) please?
+- Would you give me coronavirus vax status of [P.A. Trento](region) please?
+- Sorry could you show me the covid-19 vaccine information in [sar](region)?
+- tell me vaccine statistics in [total](region)
+- Sorry give me the [Basilicata](region) covid-19 vaccine stats?
+- i want to know the vax status?
+- Sorry can you show me vax statistics in [sic](region)?
+- i wanna know the [Basilicata](region) covid-19 vaccination situation?
+- sorry give me the [Basilicata](region) coronavirus vaccine info please
+- I would like to know the covid-19 vaccine statistics in [Emilia Romagna](region) please?
+- i want to know vaccination information
+- Sorry would you tell me vaccine stats of [Friuli Venezia Giulia](region)?
+- give me [laz](region) vax information?
+- I would like to know the vaccine status
+- can you show me the [pug](region) vax information?
+- Sorry give me covid-19 vaccination situation
+- Sorry show me vax situation
+- i would like to know the [Piemonte](region) covid vax situation please?
+- I would like to know covid vaccination information in [Lazio](region)?
+- Excuse me could you show me the covid vax info in [lig](region) please
+- Sorry can you show me covid-19 vaccination information please
+- I want to know [abr](region) coronavirus vax information please?
+- i want to know the vaccination situation in [Val d'Aosta](region)
+- I would like to know vax information in [tos](region) please?
+- show me [Molise](region) covid-19 vaccination statistics?
+- Give me the covid vaccine stats please
+- i wanna know the vax info in [cam](region) please?
+- hey tell me [Abruzzo](region) coronavirus vax situation please
+- excuse me tell me the [Friuli](region) vax info please?
+- Sorry i want to know the [Toscana](region) covid vaccine statistics please?
+- Hey i wanna know the covid-19 vaccination info in [Abruzzo](region)?
+- could you show me vax stats in [Abruzzo](region) please?
+- I would like to know vaccine situation of [Liguria](region)
+- i would like to know coronavirus vaccination information of [cal](region) please
+- Give me the vaccination info?
+- hey could you give me vaccine status of [Liguria](region) please
+- I want to know coronavirus vax stats please?
+- show me the coronavirus vax statistics
+- I wanna know the vax status of [Val d'Aosta](region)?
+- I would like to know the [Emilia Romagna](region) vaccination stats?
+- i would like to know [umb](region) vaccination situation
+- hey give me [pab](region) vaccination information please
+- Sorry show me covid vax situation of [Emilia](region)?
+- excuse me show me vaccination stats in [bas](region)?
+- Sorry tell me the vax status in [Val d'Aosta](region) please
+- sorry i wanna know [Molise](region) vaccine information
+- hey i want to know the vaccination status in [Veneto](region)?
+- Hey i wanna know the [fvg](region) vaccination statistics?
+- could you tell me vaccination situation please?
+- Excuse me i wanna know vaccine stats
+- sorry can you give me the [Toscana](region) vaccine information please?
+- I wanna know the covid-19 vaccine statistics please
+- hey show me vax statistics in [Molise](region)?
+- excuse me i would like to know the covid-19 vaccination status
+- Hey i would like to know covid-19 vaccine status of [cam](region) please?
+- i want to know vax stats in [umb](region)?
+- Sorry i want to know vaccine info of [mol](region) please
+- i wanna know the [sic](region) covid-19 vax stats?
+- Hey i wanna know the coronavirus vaccination status?
+- Hey show me [Liguria](region) vaccine status please
+- give me vax stats in [sar](region)?
+- I would like to know vaccination info in [tos](region)
+- Hey show me the vaccine statistics please
+- sorry would you tell me vax info please
+- Excuse me would you give me the [Marche](region) vax situation
+- Excuse me i would like to know the covid vaccine situation of [Campania](region) please?
+- I wanna know coronavirus vaccine situation?
+- sorry can you show me vaccination statistics?
+- excuse me i want to know covid vaccination information of [Lazio](region) please?
+- Excuse me give me coronavirus vaccination info of [lig](region)
+- Hey i wanna know covid-19 vaccine info in [Trento](region)?
+- Could you tell me covid vaccine info of [Basilicata](region) please?
+- excuse me i wanna know the vax status?
+- Excuse me could you show me the coronavirus vax situation?
+- hey can you tell me the vaccination stats please
+- sorry i want to know vaccine information?
+- I wanna know the vaccination info of [Puglia](region)?
+- hey tell me covid-19 vaccine situation of [pie](region)
+- hey i want to know [Sardegna](region) coronavirus vaccine situation?
+- Hey show me coronavirus vax info of [lig](region)?
+- hey can you show me the covid-19 vaccine stats of [sar](region)
+- excuse me i wanna know vax stats please
+- I want to know the vaccination information please
+- could you give me [Campania](region) vax stats?
+- give me [sar](region) covid vax info
+- sorry could you show me the [Veneto](region) vaccine info
+- i would like to know the vaccination info
+- Could you tell me the [sar](region) covid-19 vax status
+- sorry could you give me [Liguria](region) covid-19 vaccine statistics please
+- excuse me show me the [cal](region) vax statistics
+- excuse me i want to know the vaccination statistics in [ven](region) please
+- Sorry give me vax status in [mar](region) please?
+- give me the covid vaccine information?
+- Show me the covid vaccine info in [pab](region) please?
+- Sorry tell me the covid-19 vaccination situation?
+- sorry would you show me the [Abruzzo](region) vax statistics please
+- show me [abr](region) vaccine situation please
+- Hey tell me the covid vax info of [Puglia](region) please
+- Excuse me show me covid-19 vaccination info in [umb](region)?
+- excuse me i wanna know covid vax information?
+- Show me the coronavirus vaccine information?
+- i want to know the vaccine situation?
+- i want to know the [pie](region) vax stats
+- Would you show me the [Lombardia](region) vaccine stats please
+- Sorry can you show me coronavirus vax stats in [italian](region) please?
+- show me covid-19 vax situation in [Abruzzo](region)
+- sorry i wanna know the vax stats
+- i wanna know coronavirus vaccine statistics in [pab](region)?
+- Could you show me the covid vaccine info of [Basilicata](region)
+- I want to know the coronavirus vax stats in [Molise](region) please
+- Tell me covid-19 vaccine info in [Umbria](region) please?
+- can you give me covid-19 vax information?
+- I want to know the vaccination info of [Friuli Venezia Giulia](region) please
+- Hey can you tell me the coronavirus vaccine info
+- hey give me covid-19 vax status
+- Give me covid vax statistics of [Emilia Romagna](region)
+- Excuse me could you give me the covid-19 vax information of [pie](region) please?
+- Could you tell me the covid-19 vaccine information please
+- i would like to know coronavirus vaccination situation
+- tell me [Trento](region) covid-19 vaccination stats please?
+- Excuse me tell me vaccination info of [Friuli](region)?
+- I want to know the [Lazio](region) vaccination info please
+- hey could you tell me vaccination info in [P.A. Bolzano](region)
+- give me the [mol](region) coronavirus vaccine statistics?
+- sorry i want to know the [bas](region) covid vaccination status?
+- sorry would you show me the [Abruzzo](region) coronavirus vaccine info please?
+- I wanna know [cam](region) vaccination status please?
+- i wanna know [pie](region) vaccination information
+- Sorry i want to know the [laz](region) coronavirus vaccine situation please
+- Hey i wanna know the vaccine situation please?
+- Show me [Umbria](region) vax information please
+- hey i want to know the coronavirus vaccination situation?
+- would you show me the [emr](region) coronavirus vaccine stats please
+- give me the coronavirus vaccine information?
+- Excuse me tell me the vaccination status?
+- sorry i want to know covid-19 vaccination info please?
+- would you give me the covid-19 vaccine statistics?
+- excuse me could you tell me covid-19 vaccination info of [Friuli Venezia Giulia](region) please?
+- Sorry i would like to know [pab](region) vax statistics please
+- Sorry would you tell me [cal](region) covid-19 vaccine information?
+- Excuse me show me the vax situation in [cam](region) please
+- I would like to know [Val d'Aosta](region) vaccination statistics please
+- i would like to know the vax stats of [general](region)
+- Excuse me i would like to know covid vaccination statistics please?
+- Sorry give me the vax stats of [abr](region) please?
+- i want to know vaccination info in [Marche](region)?
+- Sorry would you show me the vaccination status please
+- Would you give me [Friuli](region) vax stats?
+- i want to know covid vaccine status of [Umbria](region)
+- Hey could you show me the coronavirus vaccination information please
+- i would like to know covid vaccine stats in [Puglia](region)
+- hey tell me covid-19 vaccination stats of [Valle d'Aosta](region)?
+- i want to know covid-19 vax status please?
+- i want to know covid-19 vaccination information please?
+- hey give me the coronavirus vaccination statistics please
+- Hey i want to know covid vaccination status in [Piemonte](region)
+- I wanna know the [cam](region) vaccination situation?
+- Hey i wanna know [Lazio](region) vaccination stats please?
+- Excuse me i wanna know the [sic](region) covid-19 vaccine information?
+- excuse me i would like to know [Sicilia](region) vax stats please?
+- Sorry i want to know the [sar](region) vax information please?
+- I want to know the [sic](region) covid vax situation please?
+- Tell me the vax statistics please
+- Tell me vax info?
+- I would like to know the [Trentino](region) vaccine stats please?
+- sorry show me the [Campania](region) vaccine info?
+- Sorry give me [general](region) covid vaccination status?
+- sorry could you give me [mol](region) covid-19 vaccination status?
+- sorry i wanna know the [cam](region) covid-19 vax information?
+- excuse me would you tell me the [Liguria](region) covid vaccination information please
+- Excuse me i would like to know vaccination statistics of [emr](region) please?
+- can you tell me [bas](region) covid vaccine stats please
+- I would like to know the covid vaccination information
+- Could you tell me [Campania](region) vaccination info please
+- I want to know covid vax situation of [abr](region) please?
+- Give me the coronavirus vaccination situation of [pab](region) please
+- Excuse me could you give me the [ven](region) coronavirus vax info please
+- i would like to know the [Calabria](region) vaccine statistics
+- excuse me give me [Umbria](region) vaccination information?
+- I would like to know vaccine statistics please?
+- Tell me the covid-19 vaccination stats please?
+- Excuse me i wanna know coronavirus vaccination information of [laz](region) please
+- Tell me the [umb](region) covid-19 vaccine status
+- Excuse me show me the vaccine info of [ita](region) please
+- i want to know covid-19 vaccination information?
+- sorry i would like to know the vaccination info in [cal](region) please?
+- show me the coronavirus vaccine stats please
+- hey i want to know [pug](region) vaccine situation
+- i wanna know the [P.A. Trento](region) vaccine statistics please?
+- i would like to know [abr](region) vax info please
+- Sorry show me the covid-19 vax statistics of [emr](region) please?
+- sorry show me the [bas](region) covid-19 vaccine situation please
+- Hey i want to know covid-19 vaccine status?
+- excuse me i would like to know the vaccine statistics please
+- I wanna know [fvg](region) covid vaccination situation?
+- excuse me i wanna know the [Calabria](region) covid-19 vaccine status?
+- excuse me would you show me the [Abruzzo](region) vax information please
+- Give me [pab](region) coronavirus vax statistics please
+- i would like to know the [Liguria](region) vaccine information
+- Tell me the covid vaccine info in [Umbria](region)
+- excuse me can you tell me vaccine statistics of [ven](region) please
+- sorry i want to know vaccination status of [Basilicata](region) please?
+- hey show me [Puglia](region) covid vaccine situation?
+- i would like to know vax information of [pie](region)?
+- Excuse me i would like to know [vda](region) coronavirus vaccine stats please
+- Excuse me i wanna know vaccine status in [italian](region)?
+- Excuse me i wanna know vax statistics please
+- Show me covid-19 vaccine information in [lig](region) please
+- Hey i wanna know vaccine statistics in [abr](region) please
+- Sorry show me covid vaccine status of [Calabria](region) please
+- Sorry give me the [Piemonte](region) vaccine statistics
+- I wanna know the [Piemonte](region) vax status please?
+- Excuse me i want to know the [sar](region) vax stats please
+- Tell me vaccination situation in [Lazio](region)?
+- Sorry could you show me [Abruzzo](region) coronavirus vaccine status?
+- hey can you tell me the coronavirus vax information?
+- Show me covid vaccine situation in [Abruzzo](region) please?
+- I want to know the covid-19 vax info in [cal](region) please
+- sorry i want to know the vaccine stats?
+- could you tell me covid vaccine statistics?
+- Sorry could you tell me covid-19 vax status in [abr](region) please?
+- hey i wanna know the covid vaccination statistics please?
+- Excuse me could you give me covid vax status in [Basilicata](region) please?
+- hey could you tell me the coronavirus vaccine stats of [lig](region)?
+- excuse me i would like to know the covid vaccination info of [pat](region)?
+- give me the [bas](region) vaccination stats
+- Show me vaccination info in [Valle d'Aosta](region) please
+- Hey i want to know the vaccine statistics please
+- Excuse me show me vaccination statistics of [abr](region) please?
+- I want to know the coronavirus vax status?
+- i wanna know the vaccine statistics of [ven](region) please
+- Hey i want to know the covid-19 vax information
+- I want to know [lom](region) covid vaccine stats
+- Would you give me vax situation in [P.A. Bolzano](region) please?
+- Hey give me vaccination stats please
+- Excuse me i would like to know coronavirus vaccine status please?
+- Hey tell me [Sardegna](region) vaccination status please?
+- could you show me [Sardegna](region) coronavirus vax situation please?
+- i wanna know covid-19 vaccine information of [ita](region) please
+- Sorry show me the vax status please?
+- tell me vaccination situation please?
+- i wanna know [fvg](region) covid vaccination info please
+- excuse me could you show me the [mol](region) vaccination stats
+- Would you tell me the vaccination info
+- sorry i wanna know the covid-19 vaccination statistics?
+- sorry i wanna know covid-19 vax status in [mar](region)?
+- sorry tell me coronavirus vaccination information of [sar](region) please
+- hey i want to know the covid-19 vaccine status please
+- Show me coronavirus vaccination situation
+- Excuse me can you show me the vaccine statistics in [Val d'Aosta](region) please?
+- Excuse me i want to know [Abruzzo](region) coronavirus vax information?
+- excuse me tell me vaccine info in [Campania](region)
+- tell me the [Sicilia](region) vax situation
+- excuse me i want to know the vaccination information of [Emilia](region)?
+- i want to know vaccination status of [abr](region) please
+- sorry i want to know the [laz](region) vax status please?
+- Could you tell me covid-19 vaccination situation in [italy](region) please
+- Excuse me give me the covid-19 vaccination stats of [Valle d'Aosta](region)?
+- Hey tell me the covid-19 vax stats?
+- Hey give me vaccine stats of [italy](region)?
+- hey i wanna know vax information please?
+- Sorry would you give me covid-19 vaccine information please?
+- I wanna know the [Trento](region) vax statistics?
+- I wanna know the covid-19 vaccine info in [sic](region)?
+- sorry i would like to know covid-19 vax stats in [laz](region) please
+- sorry i wanna know vaccination statistics of [Basilicata](region)?
+- I would like to know the [Lazio](region) covid vaccine info
+- hey i wanna know the vaccination stats?
+- Excuse me would you give me the covid-19 vax statistics please
+- Excuse me would you give me [Piemonte](region) covid vax status please?
+- Give me [Marche](region) vaccination info?
+- i would like to know [Veneto](region) vax statistics please
+- could you show me the [Veneto](region) vaccine info please?
+- Excuse me can you show me the covid vaccine status?
+- I would like to know coronavirus vax situation?
+- Excuse me i wanna know vax situation in [Sicilia](region) please?
+- Can you tell me the [pug](region) covid-19 vax info please?
+- Can you tell me [ven](region) vaccination statistics please?
+- hey can you show me vaccination stats please
+- Sorry i want to know vaccine information of [italy](region) please?
+- Hey i wanna know vax situation of [Campania](region) please?
+- sorry i would like to know [Marche](region) coronavirus vax statistics?
+- i wanna know coronavirus vax situation in [Emilia Romagna](region) please
+- Excuse me i would like to know [Piemonte](region) covid vaccination info please?
+- would you give me coronavirus vax info
+- Would you show me [lom](region) vax stats please
+- Sorry i would like to know the covid vax status in [laz](region)
+- Tell me vaccination status of [mar](region) please?
+- could you give me the covid vaccine stats
+- Sorry i wanna know the vaccination information please
+- hey give me the vaccine info in [vda](region) please
+- excuse me i wanna know the covid-19 vaccine stats of [Molise](region) please?
+- i want to know the [Puglia](region) vax information?
+- Sorry tell me [Abruzzo](region) vax situation
+- hey show me [italian](region) vaccine information please?
+- Give me the vax stats please
+- excuse me i want to know vaccine status of [Emilia Romagna](region)
+- Hey i wanna know [Valle d'Aosta](region) vaccine situation?
+- i would like to know the covid-19 vaccine statistics in [mol](region) please?
+- Can you tell me [Alto Adige](region) vaccine stats please?
+- Hey would you show me the covid vax information?
+- i want to know the vaccination situation of [Emilia Romagna](region)
+- i wanna know vaccine statistics in [cam](region)
+- Sorry i want to know the [Emilia](region) vaccination statistics
+- sorry i want to know the covid-19 vaccination stats please
+- i want to know the coronavirus vaccine situation?
+- I would like to know the covid vaccination information please
+- excuse me i wanna know the vax statistics please?
+- i would like to know the [Puglia](region) coronavirus vax information please
+- Hey could you give me [Campania](region) vaccine situation
+- excuse me i would like to know the vax info
+- Give me the [italy](region) covid vax statistics please
+- give me vax stats please
+- i want to know covid vaccine information?
+- i wanna know the vax info of [P.A. Bolzano](region)?
+- Could you show me [P.A. Trento](region) covid vaccine info please?
+- tell me [Sardegna](region) covid-19 vaccination status please
+- sorry i would like to know the [Calabria](region) vaccination info?
+- sorry i would like to know vaccination info?
+- sorry i wanna know coronavirus vaccine info please?
+- Give me [Puglia](region) coronavirus vax status please?
+- Tell me vaccine statistics please?
+- I wanna know vaccine statistics
+- excuse me could you give me the covid-19 vaccine situation
+- I would like to know the vaccine status?
+- Excuse me i want to know vax stats in [Basilicata](region) please
+- excuse me i want to know vaccination situation of [Marche](region) please
+- Sorry can you give me the [Piemonte](region) vax info
+- sorry can you show me [P.A. Bolzano](region) covid-19 vaccine situation please?
+- excuse me i would like to know the [fvg](region) covid vaccination info
+- excuse me i want to know vaccination situation please?
+- Hey i want to know covid-19 vax situation of [lom](region) please
+- excuse me i want to know the [emr](region) coronavirus vaccine statistics please
+- i wanna know [Lazio](region) covid vaccine status
+- Excuse me i want to know covid-19 vaccination information of [sar](region)
+- sorry could you show me the covid vax info?
+- sorry would you give me [Marche](region) covid-19 vax info
+- excuse me i wanna know [Sardegna](region) vax information?
+- sorry show me the vax info please
+- Give me [Toscana](region) covid vaccine information please?
+- Hey i would like to know the [general](region) covid-19 vax information?
+- could you show me the covid-19 vaccine statistics in [italy](region) please
+- hey i would like to know covid-19 vaccination stats in [mar](region)
+- excuse me i wanna know coronavirus vaccine info please?
+- Excuse me give me vaccine info in [Abruzzo](region)?
+- Sorry i want to know vaccine info please
+- Hey can you give me the [abr](region) vaccine information
+- i want to know the [Puglia](region) vaccine status please?
+- Sorry would you show me the vax status please
+- Hey show me [Trentino](region) vaccine stats?
+- hey tell me vaccine information
+- sorry tell me the covid-19 vaccine situation please
+- hey i wanna know coronavirus vaccination situation in [pug](region) please?
+- excuse me would you show me vaccination situation
+- Sorry would you give me the [Piemonte](region) covid vaccination status?
+- excuse me i would like to know covid vaccination info please?
+- hey can you give me the [Lombardia](region) covid-19 vax statistics please
+- Excuse me would you tell me the [Sicilia](region) covid vaccination info please
+- sorry show me the vaccination information?
+- show me vaccination situation please?
+- Excuse me tell me the [lom](region) covid-19 vaccination status please?
+- could you show me the [tos](region) vax information please
+- hey i wanna know [Friuli Venezia Giulia](region) vaccination statistics
+- hey i want to know [Toscana](region) covid-19 vaccine info
+- excuse me show me the vaccine stats please
+- sorry give me the coronavirus vax stats
+- I would like to know [Sicilia](region) covid-19 vax statistics please
+- Hey i want to know [Valle d'Aosta](region) vax information please?
+- i would like to know [pug](region) coronavirus vaccine info?
+- Sorry could you show me the vax stats please
+- I would like to know coronavirus vaccination information of [Abruzzo](region)?
+- Sorry i want to know [sar](region) covid-19 vaccination statistics?
+- can you tell me the coronavirus vaccine stats of [mol](region)
+- Could you show me the vax statistics in [Campania](region) please?
+- i wanna know covid vaccination statistics please?
+- would you give me the covid vax situation please
+- excuse me tell me the vaccination statistics
+- sorry tell me the coronavirus vaccine info in [Liguria](region) please?
+- sorry could you give me the [Toscana](region) covid-19 vaccination info
+- Hey i want to know the vaccine information of [emr](region)
+- Give me the covid-19 vaccination info in [Veneto](region)?
+- Can you give me the vaccine stats in [ven](region) please?
+- sorry show me the vaccination statistics in [Alto Adige](region) please
+- Hey can you show me the covid-19 vaccine statistics?
+- sorry would you give me [laz](region) covid vaccine info please?
+- excuse me give me the [Lazio](region) vax statistics?
+- i wanna know the coronavirus vaccine status of [Molise](region)
+- excuse me i want to know the [lig](region) covid vax situation
+- excuse me would you give me the [Basilicata](region) vaccine info?
+- I would like to know [cal](region) vaccine stats
+- Sorry i wanna know the [Val d'Aosta](region) covid vaccine statistics
+- excuse me i wanna know vaccine situation of [Puglia](region) please
+- Sorry can you show me [umb](region) vaccine statistics
+- hey could you show me [laz](region) vaccination status please
+- Excuse me give me the [lig](region) vax information?
+- hey i would like to know coronavirus vax information
+- Sorry i would like to know covid-19 vaccination statistics
+- hey would you give me covid vax statistics
+- Would you tell me covid vax statistics please?
+- excuse me i would like to know vax information please?
+- I would like to know [Lombardia](region) coronavirus vax stats?
+- would you give me vaccination information?
+- Show me the [Piemonte](region) covid vaccination information
+- Excuse me could you tell me covid vaccination information of [sic](region) please
+- Tell me vaccine statistics
+- can you give me vax information please?
+- i would like to know the covid vax stats in [Piemonte](region)?
+- excuse me i wanna know the covid vaccine stats in [Calabria](region)
+- excuse me could you show me vaccine info in [Sicilia](region) please
+- Hey tell me the [Lazio](region) coronavirus vax situation
+- Hey i want to know vaccine stats in [lig](region) please?
+- Could you give me the covid-19 vaccine situation
+- Sorry could you give me coronavirus vaccine situation of [Marche](region)?
+- I want to know the [tos](region) vax statistics please
+- i want to know the [mol](region) covid vaccination info please?
+- Give me the vaccination info in [pie](region)
+- i want to know the [mol](region) vaccine stats
+- I would like to know the vaccine statistics of [pab](region)
+- I want to know the coronavirus vaccination information in [Campania](region)?
+- i would like to know [mar](region) coronavirus vax situation please?
+- Excuse me can you tell me the covid vax status of [Trentino](region)
+- I would like to know the covid vaccine stats in [cal](region)
+- Sorry give me the vaccination statistics of [mar](region)?
+- I want to know the coronavirus vax situation please
+- sorry could you give me the vaccine statistics in [Marche](region)
+- I want to know the covid-19 vaccination status?
+- show me the coronavirus vax statistics please?
+- Hey i want to know [ven](region) covid-19 vaccination situation
+- Could you tell me vax situation please?
+- excuse me i would like to know vaccination information in [Valle d'Aosta](region)?
+- excuse me give me coronavirus vaccine stats?
+- i want to know the coronavirus vaccine information in [laz](region) please?
+- excuse me tell me coronavirus vaccine info of [abr](region) please
+- Sorry i want to know the vax situation of [Friuli Venezia Giulia](region)?
+- hey i would like to know the vaccination information?
+- excuse me can you give me covid vaccination status
+- Hey show me [Piemonte](region) coronavirus vaccine info?
+- I would like to know the [abr](region) vaccination stats please?
+- could you show me covid-19 vax status please
+- Can you tell me the vaccination situation please
+- i wanna know the vax info of [mol](region)?
+- i wanna know the vax statistics in [umb](region)?
+- I would like to know covid vaccine stats in [Lazio](region) please?
+- i would like to know the vax status of [tos](region)
+- excuse me show me the vaccine situation please
+- Give me the vaccination status please
+- I would like to know [Toscana](region) coronavirus vaccination information please
+- I want to know covid vaccine situation of [Calabria](region) please
+- could you give me vax situation please
+- sorry would you tell me coronavirus vax statistics in [Sardegna](region) please?
+- Could you show me the covid vaccine info?
+- Sorry i would like to know the [pug](region) vaccination information
+- sorry i want to know covid-19 vaccination information
+- give me [cam](region) coronavirus vax information please
+- I wanna know the coronavirus vaccination status of [Friuli Venezia Giulia](region) please
+- hey can you give me [Abruzzo](region) vaccine info please
+- Excuse me show me vaccination statistics please?
+- hey i want to know covid-19 vaccine situation in [Sardegna](region)?
+- show me [italian](region) covid-19 vaccination info
+- i would like to know the vaccine status of [Campania](region) please?
+- Sorry show me the vax statistics of [laz](region)?
+- could you tell me coronavirus vaccine stats
+- sorry show me vaccine status in [Campania](region)
+- Sorry i would like to know the coronavirus vaccination information in [fvg](region)?
+- Excuse me i wanna know the vaccination info in [Friuli](region)?
+- Hey i would like to know the vax statistics in [Toscana](region) please
+- i would like to know coronavirus vaccination situation in [pie](region) please
+- Excuse me tell me the [Veneto](region) vaccine information please
+- Give me the [P.A. Bolzano](region) vax status
+- could you show me the [mol](region) vaccination situation
+- Could you show me the vaccination status please
+- Sorry i wanna know [Abruzzo](region) vax situation
+- excuse me i want to know vax situation of [umb](region) please
+- Sorry can you show me the covid-19 vaccine info please
+- Sorry i wanna know the [Umbria](region) vaccine status
+- excuse me show me vaccination statistics
+- excuse me show me the [pat](region) vaccine stats please?
+- Would you tell me the covid-19 vaccination statistics
+- Sorry i wanna know vaccination info in [Marche](region) please
+- excuse me show me the covid vaccination stats in [Umbria](region) please
+- Excuse me i would like to know coronavirus vaccination status of [Emilia](region) please?
+- i want to know coronavirus vaccine statistics of [Umbria](region) please?
+- i wanna know covid vaccine information in [Veneto](region)?
+- Excuse me could you tell me covid vaccination information please
+- i wanna know the covid vax statistics please?
+- Hey tell me covid vaccine stats in [sic](region)?
+- Excuse me tell me the covid-19 vax situation of [Puglia](region)?
+- I want to know [cal](region) covid-19 vaccine information please?
+- Tell me vax stats in [Alto Adige](region) please?
+- I want to know the vaccine information of [Calabria](region)?
+- sorry give me covid-19 vaccination information of [Valle d'Aosta](region)
+- Hey give me the coronavirus vax information
+- tell me coronavirus vaccination situation please
+- hey show me [total](region) vaccine status please
+- Sorry tell me the [Calabria](region) vaccine info please
+- I want to know the covid vax status
+- i want to know the [vda](region) vaccine stats please?
+- I would like to know vaccine statistics please
+- hey show me vaccine info
+- Excuse me i would like to know vaccination information please?
+- Tell me the vaccine situation of [pug](region) please
+- Hey i wanna know the vaccine situation?
+
+## synonym:ABR
+- Abruzzo
+- abr
+
+## synonym:BAS
+- Basilicata
+- bas
+
+## synonym:CAL
+- Calabria
+- cal
+
+## synonym:CAM
+- cam
+- Campania
+
+## synonym:EMR
+- Emilia
+- emr
+- Emilia Romagna
+
+## synonym:FVG
+- Friuli
+- Friuli Venezia Giulia
+- fvg
+
+## synonym:ITA
+- total
+- general
+- italy
+- italian
+- all
+- ita
+
+## synonym:LAZ
+- Lazio
+- laz
+
+## synonym:LIG
+- Liguria
+- lig
+
+## synonym:LOM
+- Lombardia
+- lom
+
+## synonym:MAR
+- mar
+- Marche
+
+## synonym:MOL
+- mol
+- Molise
+
+## synonym:PAB
+- pab
+- P.A. Bolzano
+- Bolzano
+- Alto Adige
+
+## synonym:PAT
+- P.A. Trento
+- Trento
+- pat
+- Trentino
+
+## synonym:PIE
+- Piemonte
+- pie
+
+## synonym:PUG
+- Puglia
+- pug
+
+## synonym:SAR
+- sar
+- Sardegna
+
+## synonym:SIC
+- sic
+- Sicilia
+
+## synonym:TOS
+- tos
+- Toscana
+
+## synonym:UMB
+- umb
+- Umbria
+
+## synonym:VDA
+- vda
+- Valle d'Aosta
+- Val d'Aosta
+
+## synonym:VEN
+- Veneto
+- ven
+
+## regex:id_number
+- \d{10,10}
+
+## lookup:region
+- Abruzzo
+- Basilicata
+- Calabria
+- Campania
+- Emilia Romagna
+- Friuli Venezia Giulia
+- Lazio
+- Liguria
+- Lombardia
+- Marche
+- Molise
+- P.A. Bolzano
+- P.A. Trento
+- Piemonte
+- Puglia
+- Sardegna
+- Sicilia
+- Toscana
+- Umbria
+- Valle d'Aosta
+- Veneto
+- italy

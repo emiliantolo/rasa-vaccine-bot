@@ -1,0 +1,26 @@
+[
+  {
+    "text": "nope",
+    "intent": "deny",
+    "intent_prediction": {
+      "name": "booking_delete",
+      "confidence": 0.9300566911697388
+    }
+  },
+  {
+    "text": "good morning",
+    "intent": "greet",
+    "intent_prediction": {
+      "name": "vaccine_booking",
+      "confidence": 0.7427904605865479
+    }
+  },
+  {
+    "text": "good",
+    "intent": "affirm",
+    "intent_prediction": {
+      "name": "vaccine_booking",
+      "confidence": 0.9986301064491272
+    }
+  }
+]

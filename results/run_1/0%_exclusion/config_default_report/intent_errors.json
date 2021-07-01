@@ -1,0 +1,26 @@
+[
+  {
+    "text": "good morning",
+    "intent": "greet",
+    "intent_prediction": {
+      "name": "booking_details",
+      "confidence": 0.9960390329360962
+    }
+  },
+  {
+    "text": "yes i am",
+    "intent": "affirm",
+    "intent_prediction": {
+      "name": "provide_region",
+      "confidence": 1.0
+    }
+  },
+  {
+    "text": "3",
+    "intent": "provide_option",
+    "intent_prediction": {
+      "name": "provide_id",
+      "confidence": 0.9984849691390991
+    }
+  }
+]

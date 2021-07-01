@@ -1,0 +1,30 @@
+[
+  {
+    "text": "yes i am",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "region",
+        "start": 6,
+        "end": 8,
+        "confidence_entity": 0.9999103546142578,
+        "value": "am",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "3",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "id_number",
+        "start": 0,
+        "end": 1,
+        "confidence_entity": 0.8099775910377502,
+        "value": "3",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  }
+]

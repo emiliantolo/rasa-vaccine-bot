@@ -2,7 +2,7 @@ from typing import Any, Text, Dict, List
 
 from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
-from rasa_sdk.events import AllSlotsReset, SlotSet
+from rasa_sdk.events import AllSlotsReset, SlotSet, UserUtteranceReverted
 from rasa_sdk import Tracker, FormValidationAction
 
 import datetime
@@ -348,3 +348,15 @@ class ValidateDeleteForm(FormValidationAction):
         else:
             dispatcher.utter_message(text="No user with id {} was found.".format(slot_value))
             return {"id_number": None}
+
+class ActionRepeat(Action):
+    def name(self) -> Text:
+        return "action_repeat"
+
+    def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+
+        for i in range(1, 10):
+            if tracker.events[-i]['event'] == 'bot' and tracker.events[-i]['text'] != None:
+                dispatcher.utter_message(text=tracker.events[-i]['text'])
+                break
+        return [UserUtteranceReverted()]

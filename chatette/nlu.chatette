@@ -102,6 +102,11 @@
    am I talking to a bot?
    am I talking to a human?
 
+%[repeat_please](30)
+   ~[sorry?] ~[can you] repeat ~[please?][\??]
+   ~[sorry?] ~[can you] say it again ~[please?][\??]
+   ~[sorry?] I did not understand
+
 ~[covid]
     covid
     covid-19

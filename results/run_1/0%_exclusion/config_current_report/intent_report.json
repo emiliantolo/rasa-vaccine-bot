@@ -1,0 +1,112 @@
+{
+  "affirm": {
+    "precision": 1.0,
+    "recall": 0.5,
+    "f1-score": 0.6666666666666666,
+    "support": 2,
+    "confused_with": {
+      "vaccine_booking": 1
+    }
+  },
+  "provide_email": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 6,
+    "confused_with": {}
+  },
+  "provide_region": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 100,
+    "confused_with": {}
+  },
+  "provide_date": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 4,
+    "confused_with": {}
+  },
+  "repeat_please": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 6,
+    "confused_with": {}
+  },
+  "provide_option": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 10,
+    "confused_with": {}
+  },
+  "provide_id": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 10,
+    "confused_with": {}
+  },
+  "booking_details": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 200,
+    "confused_with": {}
+  },
+  "vaccine_booking": {
+    "precision": 0.9950248756218906,
+    "recall": 1.0,
+    "f1-score": 0.9975062344139651,
+    "support": 400,
+    "confused_with": {}
+  },
+  "greet": {
+    "precision": 1.0,
+    "recall": 0.5,
+    "f1-score": 0.6666666666666666,
+    "support": 2,
+    "confused_with": {
+      "vaccine_booking": 1
+    }
+  },
+  "vaccine_stats": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 600,
+    "confused_with": {}
+  },
+  "deny": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1-score": 0.0,
+    "support": 1,
+    "confused_with": {
+      "booking_delete": 1
+    }
+  },
+  "booking_delete": {
+    "precision": 0.9950248756218906,
+    "recall": 1.0,
+    "f1-score": 0.9975062344139651,
+    "support": 200,
+    "confused_with": {}
+  },
+  "accuracy": 0.9980532121998702,
+  "macro avg": {
+    "precision": 0.9223115193264447,
+    "recall": 0.8461538461538461,
+    "f1-score": 0.8714112155508663,
+    "support": 1541
+  },
+  "weighted avg": {
+    "precision": 0.9974139684446036,
+    "recall": 0.9980532121998702,
+    "f1-score": 0.997514865227155,
+    "support": 1541
+  }
+}

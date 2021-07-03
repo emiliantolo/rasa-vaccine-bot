@@ -96,7 +96,6 @@ rules:
   condition:
   - active_loop: booking_form
   steps:
-  - action: booking_form
   - slot_was_set:
     - already_registered: true
   - active_loop: null
